@@ -1,7 +1,8 @@
 import './App.css'
-import Experiences from './sections/Profile/Experiences/Experiences';
-import Profile from './sections/Profile/Profile'
-import Skills from './sections/Profile/Skills/Skills';
+import Profile from './sections/Profile/Profile';
+import Experiences from './sections/Experiences/Experiences';
+import Skills from './sections/Skills/Skills';
+
 
 function App() {
 

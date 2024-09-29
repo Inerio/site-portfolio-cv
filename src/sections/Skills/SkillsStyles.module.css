@@ -29,11 +29,11 @@
   align-self: center;
   flex-wrap: wrap;
   row-gap: 40px;
-  max-width: 25ch;
+  max-width: 30ch;
 }
 
 p.space {
-  margin: 18px;
+  margin: 25px;
 }
 
 hr {

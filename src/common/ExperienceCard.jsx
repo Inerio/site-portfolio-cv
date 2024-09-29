@@ -1,5 +1,3 @@
-import React from 'react'
-
 function ExperienceCard({ src, link, h3, p }) {
     return (
         <a
