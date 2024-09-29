@@ -47,3 +47,17 @@ hr {
 br {
   margin: 20px;
 }
+
+@media (width >= 800px) {
+  .skillList,
+  .toolList {
+    max-width: fit-content;
+    gap: 30px;
+    p {
+      font-size: 20px;
+    }
+  }
+  hr {
+    width: 300px;
+  }
+}

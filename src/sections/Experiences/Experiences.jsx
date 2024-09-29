@@ -6,7 +6,7 @@ import abasLogo from '../../assets/abas-france-logo.png'
 import abbiStudioLogo from '../../assets/abbi-studio-logo.png'
 
 function Experiences() {
-    return <section id="projects" className={styles.container}>
+    return <section id="experiences" className={styles.container}>
         <h1 className="sectionTitle">Experiences</h1>
         <div className={styles.experiencesContainer}>
             <ExperienceCard
