@@ -1,9 +1,9 @@
 import styles from './ExperiencesStyles.module.css'
-import ExperienceCard from '../../common/ExperienceCard'
-import siteLogo from '../../assets/logo-website-alpha.png'
-import merieuxLogo from '../../assets/mérieux.png'
-import abasLogo from '../../assets/abas-france-logo.png'
-import abbiStudioLogo from '../../assets/abbi-studio-logo.png'
+import ExperienceCard from '../../Components/ExperienceCard'
+import siteLogo from '../../../files/logo-website-alpha.png'
+import merieuxLogo from '../../../files/mérieux.png'
+import abasLogo from '../../../files/abas-france-logo.png'
+import abbiStudioLogo from '../../../files/abbi-studio-logo.png'
 
 function Experiences() {
     return <section id="experiences" className={styles.container}>

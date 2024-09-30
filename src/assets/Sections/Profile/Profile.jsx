@@ -1,15 +1,15 @@
 import styles from './ProfileStyles.module.css'
-import profileImg from '../../assets/profile-img.png'
-import sun from '../../assets/sun.svg'
-import moon from '../../assets/moon.svg'
-import atLight from '../../assets/at-light.svg'
-import atDark from '../../assets/at-dark.svg'
-import linkedinLight from '../../assets/linkedin-light.svg'
-import linkedinDark from '../../assets/linkedin-dark.svg'
-import githubLight from '../../assets/github-light.svg';
-import githubDark from '../../assets/github-dark.svg';
-import CV from '../../assets/CV-Julien-De-Araujo.pdf'
-import { useTheme } from '../../common/ThemeContext'
+import profileImg from '../../../files/profile-img.png'
+import sun from '../../../files/sun.svg'
+import moon from '../../../files/moon.svg'
+import atLight from '../../../files/at-light.svg'
+import atDark from '../../../files/at-dark.svg'
+import linkedinLight from '../../../files/linkedin-light.svg'
+import linkedinDark from '../../../files/linkedin-dark.svg'
+import githubLight from '../../../files/github-light.svg';
+import githubDark from '../../../files/github-dark.svg';
+import CV from '../../../files/CV-Julien-De-Araujo.pdf'
+import { useTheme } from '../../Components/ThemeContext'
 
 function Profile() {
     const { theme, toggleTheme } = useTheme();
@@ -41,9 +41,11 @@ function Profile() {
             </h1>
             <h2>Ingénieur Informatique</h2>
             <span>
+
                 <a onClick={() => { navigator.clipboard.writeText("julien.dearaujo.pro@gmail.com"), alert("Email copié dans le presse-papiers.") }}>
                     <img src={atIcon} alt="Twitter icon" />
                 </a>
+
                 <a href="https://github.com/Inerio" target="_blank">
                     <img src={githubIcon} alt="Github icon" />
                 </a>
