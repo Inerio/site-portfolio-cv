@@ -2,8 +2,8 @@ import styles from './ProfileStyles.module.css'
 import profileImg from '../../assets/profile-img.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.svg'
-import twitterLight from '../../assets/twitter-light.svg'
-import twitterDark from '../../assets/twitter-dark.svg'
+import atLight from '../../assets/at-light.svg'
+import atDark from '../../assets/at-dark.svg'
 import linkedinLight from '../../assets/linkedin-light.svg'
 import linkedinDark from '../../assets/linkedin-dark.svg'
 import githubLight from '../../assets/github-light.svg';
@@ -14,8 +14,8 @@ import { useTheme } from '../../common/ThemeContext'
 function Profile() {
     const { theme, toggleTheme } = useTheme();
 
-    const themeIcon = theme === 'light' ? sun : moon;
-    const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
+    const themeIcon = theme === 'light' ? moon : sun;
+    const atIcon = theme === 'light' ? atLight : atDark;
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
@@ -41,8 +41,8 @@ function Profile() {
             </h1>
             <h2>Ingénieur Informatique</h2>
             <span>
-                <a href="https://x.com/home" target="_blank">
-                    <img src={twitterIcon} alt="Twitter icon" />
+                <a onClick={() => { navigator.clipboard.writeText("julien.dearaujo.pro@gmail.com"), alert("Email copié dans le presse-papiers.") }}>
+                    <img src={atIcon} alt="Twitter icon" />
                 </a>
                 <a href="https://github.com/Inerio" target="_blank">
                     <img src={githubIcon} alt="Github icon" />

@@ -29,6 +29,10 @@
     align-self: center;
   }
 
+  a:hover {
+    cursor: pointer;
+  }
+
   button {
     background-color: var(--btn-color);
     color: var(--btn-text-color);
