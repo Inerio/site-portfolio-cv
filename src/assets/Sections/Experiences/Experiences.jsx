@@ -17,19 +17,19 @@ function Experiences() {
             />
             <ExperienceCard
                 src={merieuxLogo}
-                link='https://github.com/Inerio/site-portfolio-cv'
+                link='https://www.merieuxnutrisciences.com/fr/'
                 h3="Mérieux Nutriscience"
                 p="Data developer / Full Stack"
             />
             <ExperienceCard
                 src={abasLogo}
-                link='https://github.com/Inerio/site-portfolio-cv'
+                link='https://abas-bs.com/fr'
                 h3="ABAS"
                 p="Java developer"
             />
             <ExperienceCard
                 src={abbiStudioLogo}
-                link='https://github.com/Inerio/site-portfolio-cv'
+                link='https://www.abbi.digital/'
                 h3="Abbi Studio"
                 p="Angular developer"
             />
