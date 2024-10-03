@@ -4,37 +4,35 @@ import Experiences from './assets/Sections/Experiences/Experiences';
 import Skills from './assets/Sections/Skills/Skills';
 import Contact from './assets/Sections/Contact/Contact';
 import Footer from './assets/Sections/Footer/Footer';
-import Page from './assets/Sections/Page/Page';
-import { NotFound } from './assets/Sections/Notfound/Notfound';
-import { useHashNavigation } from './assets/Hooks/useHashNavigation';
+import ExperienceDetails from './assets/Sections/Experiences/ExperienceDetails';
+import { useState } from 'react';
 
 
 function App() {
-
-  const { page, param } = useHashNavigation();
-  const pageContent = getPageContent(page, param)
-
+  const [toggleExperience, setToggleExperience] = useState(false);
+  const [selectedExperience, setSelectedExperience] = useState(null);
 
   return (
     <>
-      <Profile />
-      <Experiences />
-      <Skills />
-      <Contact />
-      <Footer />
+      {!toggleExperience ? (
+        <>
+          <Profile />
+          <Experiences
+            setToggleExperience={setToggleExperience}
+            setSelectedExperience={setSelectedExperience}
+          />
+          <Skills />
+          <Contact />
+          <Footer />
+        </>
+      ) : (
+        <ExperienceDetails
+          experience={selectedExperience}
+          setToggleExperience={setToggleExperience}
+        />
+      )}
     </>
   );
-
-}
-
-function getPageContent(page, param) {
-  if (page === 'home') {
-    return <Page />
-  }
-  if (page === 'contact') {
-    return <Page />
-  }
-  return <NotFound page={page} />
 }
 
 export default App

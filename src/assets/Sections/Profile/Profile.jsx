@@ -1,23 +1,18 @@
 import styles from './ProfileStyles.module.css'
 import profileImg from '../../../files/profile-img.png'
-import sun from '../../../files/sun.svg'
-import moon from '../../../files/moon.svg'
-import atLight from '../../../files/at-light.svg'
-import atDark from '../../../files/at-dark.svg'
-import linkedinLight from '../../../files/linkedin-light.svg'
-import linkedinDark from '../../../files/linkedin-dark.svg'
-import githubLight from '../../../files/github-light.svg';
-import githubDark from '../../../files/github-dark.svg';
 import CV from '../../../files/CV-Julien-De-Araujo.pdf'
 import { useTheme } from '../../Components/ThemeContext'
+import { useThemeIcons } from '../../Hooks/useThemeIcons'
+
 
 function Profile() {
-    const { theme, toggleTheme } = useTheme();
+    const { toggleTheme } = useTheme();
+    const icons = useThemeIcons();
 
-    const themeIcon = theme === 'light' ? moon : sun;
-    const atIcon = theme === 'light' ? atLight : atDark;
-    const githubIcon = theme === 'light' ? githubLight : githubDark;
-    const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+    const handleClick = () => {
+        navigator.clipboard.writeText("julien.dearaujo.pro@gmail.com");
+        alert("Email copié dans le presse-papiers.");
+    }
 
     return <section id="profile" className={styles.container}>
         <div className={styles.colorModeContainer}>
@@ -28,7 +23,7 @@ function Profile() {
             />
             <img
                 className={styles.colorMode}
-                src={themeIcon}
+                src={icons.theme}
                 alt="Color mode icon"
                 onClick={toggleTheme}
             />
@@ -42,15 +37,15 @@ function Profile() {
             <h2>Ingénieur Informatique</h2>
             <span>
 
-                <a onClick={() => { navigator.clipboard.writeText("julien.dearaujo.pro@gmail.com"), alert("Email copié dans le presse-papiers.") }}>
-                    <img src={atIcon} alt="Twitter icon" />
+                <a onClick={handleClick}>
+                    <img src={icons.at} alt="Twitter icon" />
                 </a>
 
                 <a href="https://github.com/Inerio" target="_blank">
-                    <img src={githubIcon} alt="Github icon" />
+                    <img src={icons.github} alt="Github icon" />
                 </a>
                 <a href="https://www.linkedin.com/in/julien-de-araujo-1909a4174/" target="_blank">
-                    <img src={linkedinIcon} alt="Linkedin icon" />
+                    <img src={icons.linkedin} alt="Linkedin icon" />
                 </a>
             </span>
             <p className={styles.description}>
