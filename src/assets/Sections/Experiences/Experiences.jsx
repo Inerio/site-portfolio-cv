@@ -16,7 +16,11 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                 p="Un portfolio en React"
                 setToggleExperience={setToggleExperience}
                 setSelectedExperience={setSelectedExperience}
-                details="Le site sur lequel vous êtes..."
+                details="Le site sur lequel vous êtes... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. 
+                Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. 
+                Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. 
+                Aenean facilisis nulla accumsan laoreet blandit."
             />
             <ExperienceCard
                 src={merieuxLogo}
@@ -25,7 +29,11 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                 p="Data developer / Full Stack"
                 setToggleExperience={setToggleExperience}
                 setSelectedExperience={setSelectedExperience}
-                details="Chez Mérieux Nutriscience, j'ai travaillé sur..."
+                details="Chez Mérieux Nutriscience, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. 
+                Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. 
+                Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. 
+                Aenean facilisis nulla accumsan laoreet blandit."
             />
             <ExperienceCard
                 src={abasLogo}
@@ -34,7 +42,11 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                 p="Java developer"
                 setToggleExperience={setToggleExperience}
                 setSelectedExperience={setSelectedExperience}
-                details="Chez ABAS, j'ai travaillé sur..."
+                details="Chez ABAS, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. 
+                Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. 
+                Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. 
+                Aenean facilisis nulla accumsan laoreet blandit."
             />
             <ExperienceCard
                 src={abbiStudioLogo}
@@ -43,7 +55,11 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                 p="Angular developer"
                 setToggleExperience={setToggleExperience}
                 setSelectedExperience={setSelectedExperience}
-                details="Chez Abbi Studio, j'ai travaillé sur..."
+                details="Chez Abbi Studio, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. 
+                Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. 
+                Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. 
+                Aenean facilisis nulla accumsan laoreet blandit."
             />
         </div>
     </section>

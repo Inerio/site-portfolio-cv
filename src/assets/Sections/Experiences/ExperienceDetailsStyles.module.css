@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+
+  .profile {
+    max-width: 200px;
+  }
+
+  .colorMode {
+    position: absolute;
+    width: 45px;
+  }
+
+  .colorMode:hover {
+    cursor: pointer;
+  }
+
+  a {
+    width: fit-content;
+    align-self: center;
+  }
+}
