@@ -4,9 +4,9 @@
   justify-content: center;
   gap: 20px;
   text-align: center;
-  height: 100dvh;
-  min-height: 500px;
-  padding: 0 30px;
+  min-height: 100dvh;
+  padding: 60px 30px 30px;
+  box-sizing: border-box;
 
   .profile {
     max-width: 200px;
