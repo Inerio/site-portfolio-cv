@@ -1,3 +1,4 @@
+import styles from '../Sections/Experiences/ExperiencesStyles.module.css'
 function ExperienceCard({ src, link, h3, p, setToggleExperience, setSelectedExperience, details }) {
 
     const handleClick = (e) => {
@@ -8,7 +9,7 @@ function ExperienceCard({ src, link, h3, p, setToggleExperience, setSelectedExpe
     };
 
     return (
-        <div
+        <div className={styles.experienceCard}
             href={link}
             onClick={handleClick}>
             <img className="hover" src={src} alt={`${h3} logo`} />

@@ -1,5 +1,6 @@
 import styles from './ExperienceDetailsStyles.module.css'
-import { useThemeIcons } from '../../Hooks/useThemeIcons';
+import { useThemeIcons } from '../../Hooks/useThemeIcons'
+import web from '../../../files/web.svg'
 
 function ExperienceDetails({ experience, setToggleExperience }) {
     if (!experience) return null;
@@ -10,12 +11,14 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         <div className={styles.experiencesContainer}>
             <h2>{experience.description}</h2>
             <p>{experience.details}</p>
-            <a
+            <a className={styles.link}
                 href={experience.link}
-                target="_blank">
-                Aller vers {experience.title}
+                target="_blank" >
+                <p>Aller vers</p>
+                <img src={web} alt="web" />
             </a>
             <div onClick={() => setToggleExperience(false)}>
+                <br />
                 <img className={styles.colorMode}
                     src={icons.back}
                     alt="Back icon" />

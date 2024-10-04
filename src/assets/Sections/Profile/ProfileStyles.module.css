@@ -31,6 +31,7 @@
 
   a:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
 
   button {
@@ -42,7 +43,7 @@
     height: 50px;
     font-size: 20px;
     font-weight: bold;
-    box-shadow: 0 4px 4 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   }
 
@@ -68,6 +69,7 @@
 
 .colorMode:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .description {
