@@ -1,4 +1,4 @@
-import styles from '../Sections/Experiences/ExperiencesStyles.module.css'
+import styles from './styles/ExperiencesStyles.module.css'
 function ExperienceCard({ src, link, h3, p, setToggleExperience, setSelectedExperience, details }) {
 
     const handleClick = (e) => {

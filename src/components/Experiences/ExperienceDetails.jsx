@@ -1,6 +1,6 @@
-import styles from './ExperienceDetailsStyles.module.css'
-import { useThemeIcons } from '../../Hooks/useThemeIcons'
-import web from '../../../files/web.svg'
+import styles from './styles/ExperienceDetailsStyles.module.css'
+import { useThemeIcons } from '../../hooks/useThemeIcons'
+import web from '../../assets/pictures/icons/web.svg'
 
 function ExperienceDetails({ experience, setToggleExperience }) {
     if (!experience) return null;

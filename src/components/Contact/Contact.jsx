@@ -1,4 +1,4 @@
-import styles from './ContactStyles.module.css'
+import styles from './styles/ContactStyles.module.css'
 
 function Contact() {
     return <section id='contact' className={styles.container}>

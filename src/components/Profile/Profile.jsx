@@ -1,8 +1,8 @@
-import styles from './ProfileStyles.module.css'
-import profileImg from '../../../files/profile-img.png'
-import CV from '../../../files/CV-Julien-De-Araujo.pdf'
-import { useTheme } from '../../Components/ThemeContext'
-import { useThemeIcons } from '../../Hooks/useThemeIcons'
+import styles from './styles/ProfileStyles.module.css'
+import profileImg from '../../assets/pictures/profile-img.png'
+import CV from '../../assets/documents/CV-Julien-De-Araujo.pdf'
+import { useTheme } from '../../assets/context/ThemeContext'
+import { useThemeIcons } from '../../hooks/useThemeIcons.js'
 
 
 function Profile() {

@@ -1,0 +1,26 @@
+{
+  "portfolio": {
+    "link": "https://github.com/Inerio/site-portfolio-cv",
+    "title": "Git du projet",
+    "description": "Un portfolio en React",
+    "details": "Le site sur lequel vous êtes... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. Aenean facilisis nulla accumsan laoreet blandit."
+  },
+  "merieux": {
+    "link": "https://www.merieuxnutrisciences.com/fr/",
+    "title": "Mérieux Nutriscience",
+    "description": "Data developer / Full Stack",
+    "details": "Chez Mérieux Nutriscience, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. Aenean facilisis nulla accumsan laoreet blandit."
+  },
+  "abas": {
+    "link": "https://abas-bs.com/fr",
+    "title": "ABAS",
+    "description": "Java developer",
+    "details": "Chez ABAS France, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. Aenean facilisis nulla accumsan laoreet blandit."
+  },
+  "abbidigital": {
+    "link": "https://www.abbi.digital/",
+    "title": "Abbi Studio",
+    "description": "Angular developer",
+    "details": "Maintenant du nom d'Abbidigital, j'ai travaillé sur... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consequat nisi in semper. Pellentesque sed turpis ac ipsum lacinia rutrum vestibulum hendrerit enim. Mauris diam erat, euismod sit amet aliquam non, malesuada ac velit. Duis ante lacus, tincidunt sed massa ut, pellentesque consequat nisl. Aliquam mattis dui vulputate mattis fringilla. Maecenas lacinia accumsan maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam metus augue, blandit tempor metus at, mollis aliquet dolor. Aenean facilisis nulla accumsan laoreet blandit."
+  }
+}

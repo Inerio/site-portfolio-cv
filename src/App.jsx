@@ -1,11 +1,12 @@
 import './App.css'
-import Profile from './assets/Sections/Profile/Profile';
-import Experiences from './assets/Sections/Experiences/Experiences';
-import Skills from './assets/Sections/Skills/Skills';
-import Contact from './assets/Sections/Contact/Contact';
-import Footer from './assets/Sections/Footer/Footer';
-import ExperienceDetails from './assets/Sections/Experiences/ExperienceDetails';
+import Profile from './components/Profile/Profile';
+import Experiences from './components/Experiences/Experiences';
+import Skills from './components/Skills/Skills';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Layout/Footer';
+import ExperienceDetails from './components/Experiences/ExperienceDetails';
 import { useState } from 'react';
+
 
 
 function App() {
