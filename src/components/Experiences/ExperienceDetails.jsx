@@ -1,3 +1,4 @@
+import { useTranslation } from '../../hooks/useTranslation';
 import styles from './styles/ExperienceDetailsStyles.module.css'
 import { useThemeIcons } from '../../hooks/useThemeIcons'
 import web from '../../assets/pictures/icons/web.svg'
@@ -5,6 +6,7 @@ import web from '../../assets/pictures/icons/web.svg'
 function ExperienceDetails({ experience, setToggleExperience }) {
     if (!experience) return null;
     const icons = useThemeIcons();
+    const t = useTranslation();
 
     return <section id={experience.title} className={styles.container}>
         <h1 className="sectionTitle">{experience.title}</h1>
@@ -14,7 +16,7 @@ function ExperienceDetails({ experience, setToggleExperience }) {
             <a className={styles.link}
                 href={experience.link}
                 target="_blank" >
-                <p>Aller vers</p>
+                <p>{t('experiences.websiteButton')}</p>
                 <img src={web} alt="web" />
             </a>
             <div onClick={() => setToggleExperience(false)}>

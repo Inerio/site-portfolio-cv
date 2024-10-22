@@ -33,6 +33,7 @@ export const translations = {
         details:
           "Maintenant du nom d'Abbidigital, c'est à la suite de ce stage que j'ai eu l'opportunité d'apprendre les bases du framework Angular grâce au soutien de mon tuteur, tout en développant mes compétences en auto-formation. J'ai mené un projet en méthodologie agile, en utilisant des outils collaboratifs comme GitHub et Trello, ce qui m'a permis de bien structurer le travail en équipe. La majorité de mes tâches ont été réalisées sous un environnement Linux, renforçant ainsi mes compétences sur ce système.",
       },
+      websiteButton: "Aller vers",
     },
     skillTitle: "Compétences",
     toolsTitle: "Outils Maitrisés",
@@ -77,6 +78,7 @@ export const translations = {
         details:
           "Now known as Abbidigital, it was during this internship that I had the opportunity to learn the basics of the Angular framework thanks to the support of my mentor, while also enhancing my self-learning skills. I led a project using agile methodology, utilizing collaborative tools such as GitHub and Trello, which helped me structure teamwork effectively. Most of my tasks were completed in a Linux environment, further strengthening my skills on this system.",
       },
+      websiteButton: "Go to",
     },
     skillTitle: "Skills",
     toolsTitle: "Mastered Tools",
