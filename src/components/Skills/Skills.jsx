@@ -1,12 +1,16 @@
 import styles from './styles/SkillsStyles.module.css'
 import SkillList from './SkillList';
 import { useThemeIcons } from '../../hooks/useThemeIcons';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function Skills() {
+    //t for translationKey
+    const t = useTranslation()
+
     const icons = useThemeIcons();
 
     return < section id="skills" className={styles.container} >
-        <h1 className='sectionTitle'>Compétences</h1>
+        <h1 className='sectionTitle'>{t('skillTitle')}</h1>
         <div className={styles.skillList}>
             <SkillList src={icons.checkmark} skill="Java" />
             <SkillList src={icons.checkmark} skill="C#" />
@@ -23,7 +27,7 @@ function Skills() {
             <SkillList src={icons.checkmark} skill="Node" />
         </div>
         <p className={styles.space} />
-        <h1 className='sectionTitle'>Outils Maitrisés</h1>
+        <h1 className='sectionTitle'>{t('toolsTitle')}</h1>
         <div className={styles.toolList}>
             <SkillList src={icons.checkmark} skill="Visual Studio" />
             <SkillList src={icons.checkmark} skill="VS code" />

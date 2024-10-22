@@ -77,10 +77,47 @@
   align-self: center;
 }
 
+.flagContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.flagIconDesktop {
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  width: 28px;
+  height: 28px;
+}
+
+.flagIconDesktop:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.flagIconMobile {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.flagIconMobile:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media (max-width: 799px) {
+  .flagIconDesktop {
+    display: none;
+  }
 }
 
 @media (width >= 800px) {
@@ -93,6 +130,10 @@
       max-width: 350px;
       width: 350px;
     }
+  }
+
+  .flagIconMobile {
+    display: none;
   }
 }
 

@@ -1,18 +1,22 @@
+import { useTranslation } from '../../hooks/useTranslation'
 import styles from './styles/ContactStyles.module.css'
 
 function Contact() {
+    //t for translationKey
+    const t = useTranslation()
+
     return <section id='contact' className={styles.container}>
-        <h1 className="sectionTitle">Me contacter</h1>
+        <h1 className="sectionTitle">{t('contactTitle')}</h1>
         <form action="https://formspree.io/f/mwpegrwn" method="post">
             <div className="formGroup">
                 <label htmlFor="name" hidden>
-                    Nom
+                    Name
                 </label>
                 <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Nom"
+                    placeholder={t('name')}
                     required
                 />
             </div>
@@ -24,7 +28,7 @@ function Contact() {
                     type="text"
                     name="email"
                     id="email"
-                    placeholder="Email"
+                    placeholder={t('email')}
                     required
                 />
             </div>
@@ -35,10 +39,10 @@ function Contact() {
                 <textarea
                     name="message"
                     id="message"
-                    placeholder="Message"
+                    placeholder={t('message')}
                     required></textarea>
             </div>
-            <input className='hover btn' type="submit" value="Envoyer" />
+            <input className='hover btn' type="submit" value={t('contactButton')} />
         </form>
     </section>
 }
