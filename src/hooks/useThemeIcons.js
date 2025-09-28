@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useTheme } from "../assets/context/ThemeContext";
 import sun from "../assets/pictures/icons/sun.svg";
 import moon from "../assets/pictures/icons/moon.svg";
@@ -15,14 +16,15 @@ import checkmarkDark from "../assets/pictures/icons/checkmark-dark.svg";
 export function useThemeIcons() {
   const { theme } = useTheme();
 
-  const icons = {
-    theme: theme === "light" ? moon : sun,
-    at: theme === "light" ? atLight : atDark,
-    github: theme === "light" ? githubLight : githubDark,
-    linkedin: theme === "light" ? linkedinLight : linkedinDark,
-    back: theme === "light" ? backLight : backDark,
-    checkmark: theme === "light" ? checkmarkLight : checkmarkDark,
-  };
-
-  return icons;
+  return useMemo(
+    () => ({
+      theme: theme === "light" ? moon : sun,
+      at: theme === "light" ? atLight : atDark,
+      github: theme === "light" ? githubLight : githubDark,
+      linkedin: theme === "light" ? linkedinLight : linkedinDark,
+      back: theme === "light" ? backLight : backDark,
+      checkmark: theme === "light" ? checkmarkLight : checkmarkDark,
+    }),
+    [theme]
+  );
 }

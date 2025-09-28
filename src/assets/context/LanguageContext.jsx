@@ -1,27 +1,25 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+/* eslint react-refresh/only-export-components: "off" */
+import { createContext, useContext, useEffect, useMemo, useState } from "react"
 
-const LanguageContext = createContext();
+const LanguageContext = createContext({
+    language: "french",
+    toggleLanguage: () => { },
+})
 
-export const useLanguage = () => useContext(LanguageContext);
+export const useLanguage = () => useContext(LanguageContext)
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState(
-        () => localStorage.getItem('language') || 'french'
-    );
+    const [language, setLanguage] = useState(() => localStorage.getItem("language") || "french")
 
     useEffect(() => {
-        document.body.setAttribute('data-language', language);
-        localStorage.setItem('language', language)
-    }, [language]);
+        document.body.setAttribute("data-language", language)
+        localStorage.setItem("language", language)
+    }, [language])
 
-    const toggleLanguage = () => {
-        console.log("language switched")
-        setLanguage((prevLanguage) => (prevLanguage === 'french' ? 'english' : 'french'))
-    };
+    const toggleLanguage = () =>
+        setLanguage(prev => (prev === "french" ? "english" : "french"))
 
-    return (
-        <LanguageContext.Provider value={{ language, toggleLanguage }}>
-            {children}
-        </LanguageContext.Provider>
-    )
-};
+    const value = useMemo(() => ({ language, toggleLanguage }), [language])
+
+    return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+}

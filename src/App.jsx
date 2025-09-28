@@ -1,17 +1,15 @@
+import { useState } from 'react'
 import './App.css'
-import Profile from './components/Profile/Profile';
-import Experiences from './components/Experiences/Experiences';
-import Skills from './components/Skills/Skills';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Layout/Footer';
-import ExperienceDetails from './components/Experiences/ExperienceDetails';
-import { useState } from 'react';
-
-
+import Profile from './components/Profile/Profile'
+import Experiences from './components/Experiences/Experiences'
+import Skills from './components/Skills/Skills'
+import Contact from './components/Contact/Contact'
+import Footer from './components/Layout/Footer'
+import ExperienceDetails from './components/Experiences/ExperienceDetails'
 
 function App() {
-  const [toggleExperience, setToggleExperience] = useState(false);
-  const [selectedExperience, setSelectedExperience] = useState(null);
+  const [toggleExperience, setToggleExperience] = useState(false)
+  const [selectedExperience, setSelectedExperience] = useState(null)
 
   return (
     <>
@@ -33,7 +31,7 @@ function App() {
         />
       )}
     </>
-  );
+  )
 }
 
 export default App

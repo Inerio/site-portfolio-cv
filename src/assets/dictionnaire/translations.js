@@ -3,6 +3,8 @@ export const translations = {
     jobTitle: "Ingénieur Informatique",
     description: "Ma soif d’apprentissage est toujours présente.",
     resumeButton: "CV",
+    emailCopied: "Email copié !",
+    copyEmailAria: "Copier l’email dans le presse-papiers",
     experienceTitle: "Expériences",
     experiences: {
       portfolio: {
@@ -48,6 +50,8 @@ export const translations = {
     jobTitle: "IT Engineer",
     description: "My eagerness to learn is ever-present.",
     resumeButton: "Resume",
+    emailCopied: "Email copied!",
+    copyEmailAria: "Copy email to clipboard",
     experienceTitle: "Experiences ",
     experiences: {
       portfolio: {

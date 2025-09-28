@@ -1,27 +1,24 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+/* eslint react-refresh/only-export-components: "off" */
+import { createContext, useContext, useEffect, useMemo, useState } from "react"
 
-const ThemeContext = createContext();
+const ThemeContext = createContext({
+    theme: "light",
+    toggleTheme: () => { },
+})
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(ThemeContext)
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(
-        () => localStorage.getItem('theme') || 'light'
-    );
+    const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light")
 
     useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme)
-    }, [theme]);
+        document.body.setAttribute("data-theme", theme)
+        localStorage.setItem("theme", theme)
+    }, [theme])
 
-    const toggleTheme = () => {
-        console.log("theme switched")
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
-    };
+    const toggleTheme = () => setTheme(prev => (prev === "light" ? "dark" : "light"))
 
-    return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    )
-};
+    const value = useMemo(() => ({ theme, toggleTheme }), [theme])
+
+    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+}
