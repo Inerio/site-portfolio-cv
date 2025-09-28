@@ -7,6 +7,20 @@ export const translations = {
     copyEmailAria: "Copier l’email dans le presse-papiers",
     experienceTitle: "Expériences",
     experiences: {
+      tasukeru: {
+        link: "https://app.tasukeru.org",
+        title: "Projet full stack",
+        description: "Un gestionnaire de tâches",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at odio id nisl accumsan aliquam. Integer a ligula non dui consequat elementum. Nulla facilisi. Quisque vitae dolor vitae augue hendrerit condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur non tortor et lacus mollis posuere. Vivamus faucibus, leo ut posuere porttitor, lorem ipsum finibus arcu, non mattis ligula dui ut ipsum.",
+      },
+      datalog: {
+        link: "#",
+        title: "Projet full stack (équipe)",
+        description: "Plateforme data & logs",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id dui convallis, suscipit libero et, dignissim quam. Integer tempus, risus a pulvinar congue, enim nibh sodales arcu, et bibendum velit arcu vitae orci. Cras in justo nec nibh aliquet feugiat. Morbi tristique ex nec aliquet congue. Suspendisse potenti. Donec sed laoreet nibh. Aliquam at felis fringilla, sodales libero eget, tempus velit. Aenean convallis varius urna, sit amet molestie ex varius in.",
+      },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
         title: "Git du projet",
@@ -35,7 +49,7 @@ export const translations = {
         details:
           "Maintenant du nom d'Abbidigital, c'est à la suite de ce stage que j'ai eu l'opportunité d'apprendre les bases du framework Angular grâce au soutien de mon tuteur, tout en développant mes compétences en auto-formation. J'ai mené un projet en méthodologie agile, en utilisant des outils collaboratifs comme GitHub et Trello, ce qui m'a permis de bien structurer le travail en équipe. La majorité de mes tâches ont été réalisées sous un environnement Linux, renforçant ainsi mes compétences sur ce système.",
       },
-      websiteButton: "Aller vers",
+      websiteButton: "Aller vers le site ",
     },
     skillTitle: "Compétences",
     toolsTitle: "Outils Maitrisés",
@@ -54,6 +68,20 @@ export const translations = {
     copyEmailAria: "Copy email to clipboard",
     experienceTitle: "Experiences ",
     experiences: {
+      tasukeru: {
+        link: "https://app.tasukeru.org",
+        title: "Full stack project",
+        description: "A task manager",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at odio id nisl accumsan aliquam. Integer a ligula non dui consequat elementum. Nulla facilisi. Quisque vitae dolor vitae augue hendrerit condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur non tortor et lacus mollis posuere. Vivamus faucibus, leo ut posuere porttitor, lorem ipsum finibus arcu, non mattis ligula dui ut ipsum.",
+      },
+      datalog: {
+        link: "#",
+        title: "Full-stack project (team)",
+        description: "Data & logs platform",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id dui convallis, suscipit libero et, dignissim quam. Integer tempus, risus a pulvinar congue, enim nibh sodales arcu, et bibendum velit arcu vitae orci. Cras in justo nec nibh aliquet feugiat. Morbi tristique ex nec aliquet congue. Suspendisse potenti. Donec sed laoreet nibh. Aliquam at felis fringilla, sodales libero eget, tempus velit. Aenean convallis varius urna, sit amet molestie ex varius in.",
+      },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
         title: "Project Git",
@@ -82,7 +110,7 @@ export const translations = {
         details:
           "Now known as Abbidigital, it was during this internship that I had the opportunity to learn the basics of the Angular framework thanks to the support of my mentor, while also enhancing my self-learning skills. I led a project using agile methodology, utilizing collaborative tools such as GitHub and Trello, which helped me structure teamwork effectively. Most of my tasks were completed in a Linux environment, further strengthening my skills on this system.",
       },
-      websiteButton: "Go to",
+      websiteButton: "Go to the site ",
     },
     skillTitle: "Skills",
     toolsTitle: "Mastered Tools",

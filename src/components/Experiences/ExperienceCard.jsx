@@ -16,10 +16,12 @@ function ExperienceCard({
     }
 
     return (
-        <div className={styles.experienceCard} onClick={handleClick}>
-            <img className="hover" src={src} alt={`${h3} logo`} />
-            <h3>{h3}</h3>
-            <p>{p}</p>
+        <div className={styles.card} onClick={handleClick}>
+            <div className={styles.logoFrame}>
+                <img className={styles.logo} src={src} alt={`${h3} logo`} />
+            </div>
+            <h3 className={styles.title}>{h3}</h3>
+            <p className={styles.subtitle}>{p}</p>
         </div>
     )
 }

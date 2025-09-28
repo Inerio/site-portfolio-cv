@@ -8,7 +8,7 @@ export function useLanguageIcons() {
 
   return useMemo(
     () => ({
-      language: language === "french" ? UK_flag : FR_flag,
+      language: language === "french" ? FR_flag : UK_flag,
     }),
     [language]
   );

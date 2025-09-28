@@ -10,6 +10,7 @@
   .profile {
     max-width: 200px;
   }
+
   span {
     display: flex;
     gap: 25px;
@@ -125,11 +126,17 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
+    width: min(1200px, 92vw);
+    margin-inline: auto;
 
     .profile {
       max-width: 350px;
       width: 350px;
     }
+  }
+
+  .info {
+    flex: 0 0 clamp(380px, 34vw, 520px);
   }
 
   .flagIconMobile {

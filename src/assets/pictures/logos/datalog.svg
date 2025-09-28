@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Datalog icon">
+  <defs>
+    <style>
+      .bg   { fill:#196DC0; }  /* carte (bleu clair) */
+      .chip { fill:#0f172a; }  /* pastilles/noeuds */
+      .line { stroke:#0f172a; stroke-width:12; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+      .spark{ stroke:#ffffff; stroke-width:12; stroke-linecap:round; fill:none; opacity:0.9; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Clip pour garder les tracés à l’intérieur de la carte arrondie -->
+    <clipPath id="clipCard">
+      <rect x="96" y="96" width="320" height="320" rx="56"/>
+    </clipPath>
+  </defs>
+
+  <!-- Carte centrée et agrandie -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="50" width="420" height="420" rx="56" class="bg"/>
+  </g>
+
+  <!-- Tracés “dans” la carte -->
+  <g clip-path="url(#clipCard)">
+    <!-- Liaison (ligne principale) : occupe la largeur utile de la carte -->
+    <path d="M120 392 L192 312 L256 352 L320 240 L392 284" class="line"/>
+
+    <!-- Sparkline blanche (KPI) : bandée sur la moitié supérieure -->
+    <path d="M120 208 C160 184, 200 184, 240 212 S 320 276, 392 244" class="spark"/>
+
+    <!-- Points / noeuds alignés sur la ligne principale -->
+    <circle cx="120" cy="392" r="10" class="chip"/>
+    <circle cx="192" cy="312" r="10" class="chip"/>
+    <circle cx="256" cy="352" r="10" class="chip"/>
+    <circle cx="320" cy="240" r="10" class="chip"/>
+    <circle cx="392" cy="284" r="10" class="chip"/>
+  </g>
+</svg>
