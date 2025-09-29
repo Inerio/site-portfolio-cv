@@ -12,21 +12,21 @@ export const translations = {
         title: "Projet full stack Tasukeru",
         description: "Un gestionnaire de tâches",
         details:
-          "J’ai mené ce projet de bout en bout : front en Angular, back en Spring Boot + PostgreSQL, API REST. Le déploiement est réalisé sur AWS (EC2/RDS) derrière Nginx, conteneurisé avec Docker, avec des environnements dev/prod. J’ai mis en place les tests (E2E, unitaires, intégration) et une CI/CD GitHub Actions. Le code et l’évolution du projet sont disponibles sur mon GitHub.",
+          "J’ai créé Tasukeru pour faciliter l’organisation au quotidien et parce que j’apprécie la philosophie Kanban japonaise. Sur près de trois mois, j’ai conçu une application full-stack : Angular pour le front, Spring Boot + PostgreSQL pour le back, avec une API REST. L’application est collaborative : on peut partager l’ID d’un board pour travailler à plusieurs, et les mises à jour arrivent en temps réel grâce aux Server-Sent Events. J’ai surmonté des points techniques comme le drag-and-drop côté front (listes/colonnes/cartes) et la diffusion temps réel, le tout sécurisé par des tests unitaires, d’intégration et E2E. Le déploiement est dockerisé sur AWS (EC2/RDS derrière Nginx) avec des environnements dev/prod et une CI/CD GitHub Actions ; l’architecture a été pensée pour minimiser les coûts sans sacrifier les performances. Le projet est open source, et le code ainsi que les mises à jour sont disponibles sur mon GitHub.",
       },
       datalog: {
         showSite: false,
         title: "Projet full stack Datalog",
         description: "Plateforme data & logs",
         details:
-          "Projet vitrine inspiré de Datadog (code privé) : front Angular, back Spring Boot + PostgreSQL, API REST. Déploiement dockerisé sur AWS (EC2/RDS) derrière Nginx, avec tests et CI/CD GitHub Actions. Projet annulé avant mise en production publique, conservé pour illustrer l’architecture et mes pratiques.",
+          "Au départ, nous avons constaté que la plupart des solutions de logging/observabilité s’adressent aux grandes entreprises—puissantes, mais lourdes et coûteuses. À trois, nous avons donc voulu créer une alternative plus légère en webapp : collecte des logs applicatifs, normalisation des champs clés (niveau, source, horodatage), stockage optimisé, puis recherche rapide et tableau de bord simple (comptes, taux d’erreurs) avec un live-tail basique. La stack reposait sur Angular côté front et Spring Boot + PostgreSQL côté back, exposés via une API REST. Le tout était conteneurisé avec Docker et déployé sur AWS (EC2/RDS derrière Nginx), avec des tests et une CI/CD GitHub Actions. Le code demeure privé. Avec le temps, l’avancement a ralenti et le projet a été abandonné progressivement, pour des raisons mêlant facteurs humains, motivation et budget. Nous l’avons archivé avant une mise en production publique, en conservant l’architecture et les bonnes pratiques comme référence.",
       },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
         title: "Git du projet Portfolio",
         description: "Un portfolio en React",
         details:
-          "Le site sur lequel vous naviguez a été conçu dans le but de mettre en avant mes capacités d'apprentissage et d'adaptation, des compétences que je continue de perfectionner au fil du temps. Après avoir consacré plusieurs jours à l'étude approfondie du framework React, j'ai décidé de passer à l'action en développant ce portfolio. En quelques jours seulement, j'ai pu le réaliser, intégrant des fonctionnalités essentielles tout en me familiarisant avec les bonnes pratiques de développement moderne. Au-delà de la simple création du site, j'ai également mis en place une solution d'intégration continue. Ce système permet à chaque mise à jour de la version de production de se faire automatiquement, assurant ainsi une maintenance fluide et des déploiements sans interruption. Je vous invite à suivre l'évolution de ce projet sur mon GitHub. Ce site est en constante amélioration, et j'ai encore de nombreuses idées et fonctionnalités que je compte implémenter dans les semaines à venir. C'est un projet qui me tient à cœur, et j'ai hâte de partager de nouvelles mises à jour et solutions avec vous !",
+          "Ce site a été conçu pour mettre en avant ma capacité d’apprentissage et d’adaptation. Après quelques jours d’étude de React, j’ai réalisé ce portfolio et structuré le code en appliquant des pratiques modernes (composants clairs, styles modulaires, accessibilité de base). J’ai également mis en place une intégration continue pour automatiser les mises à jour. Le projet évolue régulièrement : j’ajoute des fonctionnalités, affine le design et améliore les performances au fil des retours. Vous pouvez en suivre l’avancement sur mon GitHub.",
       },
       merieux: {
         link: "https://www.merieuxnutrisciences.com/fr/",
@@ -73,21 +73,21 @@ export const translations = {
         title: "Full stack project Tasukeru",
         description: "A task manager",
         details:
-          "I led this project end to end: Angular front-end, Spring Boot + PostgreSQL back-end, REST API. Deployed on AWS (EC2/RDS) behind Nginx, containerized with Docker, with separate dev/prod environments. I set up tests (E2E, unit, integration) and GitHub Actions CI/CD. The source code and ongoing updates are available on my GitHub.",
+          "I built Tasukeru to make day-to-day organization simpler and because I’m a fan of the Japanese Kanban system. Over almost three months I designed a full-stack app: Angular on the front end, Spring Boot + PostgreSQL on the back end, exposed through a REST API. It’s collaborative: you can share a board ID to work with others, and updates stream in real time via Server-Sent Events. I worked through tricky parts such as front-end drag-and-drop (lists/columns/cards) and the real-time pipeline, backed by unit, integration, and end-to-end tests. The app is Dockerized and deployed on AWS (EC2/RDS behind Nginx) with separate dev/prod environments and GitHub Actions CI/CD; the architecture is tuned to keep costs low while remaining performant. The project is open source, and the code and ongoing updates are available on my GitHub.",
       },
       datalog: {
         showSite: false,
         title: "Full-stack project Datalog",
         description: "Data & logs platform",
         details:
-          "Showcase project inspired by Datadog (private code): Angular front end, Spring Boot + PostgreSQL back end, REST API. Dockerized deployment on AWS (EC2/RDS) behind Nginx, with tests and GitHub Actions CI/CD. Project was canceled before public production release; kept to illustrate architecture and practices.",
+          "At the outset we noticed that most logging/observability solutions target large enterprises—powerful, but heavy and expensive. As a team of three, we set out to build a lighter web-app alternative: collect application logs, normalize key fields (level, source, timestamp), store them efficiently, and offer fast search plus a simple dashboard (counts, error rates) with a basic live-tail view. The stack was Angular on the front end and Spring Boot + PostgreSQL on the back end, exposed through a REST API. Everything was containerized with Docker and deployed on AWS (EC2/RDS behind Nginx), with tests and GitHub Actions CI/CD. The code remains private. Over time, progress slowed and the project was gradually abandoned due to a mix of human factors, motivation, and budget constraints. We archived it before a public release, and I keep the architecture and practices as a reference.",
       },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
         title: "Project Git Portfolio",
         description: "A portfolio in React",
         details:
-          "The website you're currently browsing was designed to showcase my learning and adaptation abilities—skills I continue to refine over time. After dedicating several days to studying the React framework in depth, I decided to take action and develop this portfolio. In just a few days, I was able to build it, integrating essential features while familiarizing myself with modern development best practices. Beyond the creation of the site itself, I also set up a continuous integration solution. This system ensures that every update to the production version is made automatically, ensuring smooth maintenance and uninterrupted deployments. I invite you to follow the evolution of this project on my GitHub. The site is continuously improving, and I still have many ideas and features that I plan to implement in the coming weeks. This project is dear to my heart, and I look forward to sharing new updates and solutions with you!",
+          "This site was built to highlight my ability to learn and adapt. After a short, focused dive into React, I developed this portfolio and organized the code with modern practices—clear components, modular styles, and basic accessibility. I also set up continuous integration to automate updates. The project evolves regularly: I add features, refine the design, and improve performance based on feedback. You can follow its progress on my GitHub.",
       },
       merieux: {
         link: "https://www.merieuxnutrisciences.com/fr/",
