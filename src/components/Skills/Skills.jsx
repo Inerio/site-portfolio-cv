@@ -30,16 +30,17 @@ function Skills() {
         <h1 className='sectionTitle'>{t('toolsTitle')}</h1>
         <div className={styles.toolList}>
             <SkillList src={icons.checkmark} skill="Visual Studio" />
-            <SkillList src={icons.checkmark} skill="VS code" />
+            <SkillList src={icons.checkmark} skill="VS Code" />
+            <SkillList src={icons.checkmark} skill="Eclipse" />
             <SkillList src={icons.checkmark} skill="IntelliJ IDEA" />
-            <SkillList src={icons.checkmark} skill="Joomla" />
-            <SkillList src={icons.checkmark} skill="Wordpress" />
+            <SkillList src={icons.checkmark} skill="GitHub" />
+            <SkillList src={icons.checkmark} skill="GitAction" />
         </div>
         <hr />
         <div className={styles.toolList}>
             <SkillList src={icons.checkmark} skill="Qlik" />
-            <SkillList src={icons.checkmark} skill="GitAction" />
             <SkillList src={icons.checkmark} skill="Power BI" />
+            <SkillList src={icons.checkmark} skill="Dell Boomi" />
             <SkillList src={icons.checkmark} skill="DBeaver" />
             <SkillList src={icons.checkmark} skill="AWS" />
         </div>

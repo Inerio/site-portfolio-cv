@@ -9,21 +9,21 @@ export const translations = {
     experiences: {
       tasukeru: {
         link: "https://app.tasukeru.org",
-        title: "Projet full stack",
+        title: "Projet full stack Tasukeru",
         description: "Un gestionnaire de tâches",
         details:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at odio id nisl accumsan aliquam. Integer a ligula non dui consequat elementum. Nulla facilisi. Quisque vitae dolor vitae augue hendrerit condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur non tortor et lacus mollis posuere. Vivamus faucibus, leo ut posuere porttitor, lorem ipsum finibus arcu, non mattis ligula dui ut ipsum.",
+          "J’ai mené ce projet de bout en bout : front en Angular, back en Spring Boot + PostgreSQL, API REST. Le déploiement est réalisé sur AWS (EC2/RDS) derrière Nginx, conteneurisé avec Docker, avec des environnements dev/prod. J’ai mis en place les tests (E2E, unitaires, intégration) et une CI/CD GitHub Actions. Le code et l’évolution du projet sont disponibles sur mon GitHub.",
       },
       datalog: {
         link: "#",
-        title: "Projet full stack (équipe)",
+        title: "Projet full stack Datalog",
         description: "Plateforme data & logs",
         details:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id dui convallis, suscipit libero et, dignissim quam. Integer tempus, risus a pulvinar congue, enim nibh sodales arcu, et bibendum velit arcu vitae orci. Cras in justo nec nibh aliquet feugiat. Morbi tristique ex nec aliquet congue. Suspendisse potenti. Donec sed laoreet nibh. Aliquam at felis fringilla, sodales libero eget, tempus velit. Aenean convallis varius urna, sit amet molestie ex varius in.",
+          "Projet vitrine inspiré de Datadog (code privé) : front Angular, back Spring Boot + PostgreSQL, API REST. Déploiement dockerisé sur AWS (EC2/RDS) derrière Nginx, avec tests et CI/CD GitHub Actions. Projet annulé avant mise en production publique, conservé pour illustrer l’architecture et mes pratiques.",
       },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
-        title: "Git du projet",
+        title: "Git du projet Portfolio",
         description: "Un portfolio en React",
         details:
           "Le site sur lequel vous naviguez a été conçu dans le but de mettre en avant mes capacités d'apprentissage et d'adaptation, des compétences que je continue de perfectionner au fil du temps. Après avoir consacré plusieurs jours à l'étude approfondie du framework React, j'ai décidé de passer à l'action en développant ce portfolio. En quelques jours seulement, j'ai pu le réaliser, intégrant des fonctionnalités essentielles tout en me familiarisant avec les bonnes pratiques de développement moderne. Au-delà de la simple création du site, j'ai également mis en place une solution d'intégration continue. Ce système permet à chaque mise à jour de la version de production de se faire automatiquement, assurant ainsi une maintenance fluide et des déploiements sans interruption. Je vous invite à suivre l'évolution de ce projet sur mon GitHub. Ce site est en constante amélioration, et j'ai encore de nombreuses idées et fonctionnalités que je compte implémenter dans les semaines à venir. C'est un projet qui me tient à cœur, et j'ai hâte de partager de nouvelles mises à jour et solutions avec vous !",
@@ -70,21 +70,21 @@ export const translations = {
     experiences: {
       tasukeru: {
         link: "https://app.tasukeru.org",
-        title: "Full stack project",
+        title: "Full stack project Tasukeru",
         description: "A task manager",
         details:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at odio id nisl accumsan aliquam. Integer a ligula non dui consequat elementum. Nulla facilisi. Quisque vitae dolor vitae augue hendrerit condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur non tortor et lacus mollis posuere. Vivamus faucibus, leo ut posuere porttitor, lorem ipsum finibus arcu, non mattis ligula dui ut ipsum.",
+          "I led this project end to end: Angular front-end, Spring Boot + PostgreSQL back-end, REST API. Deployed on AWS (EC2/RDS) behind Nginx, containerized with Docker, with separate dev/prod environments. I set up tests (E2E, unit, integration) and GitHub Actions CI/CD. The source code and ongoing updates are available on my GitHub.",
       },
       datalog: {
         link: "#",
-        title: "Full-stack project (team)",
+        title: "Full-stack project Datalog",
         description: "Data & logs platform",
         details:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id dui convallis, suscipit libero et, dignissim quam. Integer tempus, risus a pulvinar congue, enim nibh sodales arcu, et bibendum velit arcu vitae orci. Cras in justo nec nibh aliquet feugiat. Morbi tristique ex nec aliquet congue. Suspendisse potenti. Donec sed laoreet nibh. Aliquam at felis fringilla, sodales libero eget, tempus velit. Aenean convallis varius urna, sit amet molestie ex varius in.",
+          "Showcase project inspired by Datadog (private code): Angular front end, Spring Boot + PostgreSQL back end, REST API. Dockerized deployment on AWS (EC2/RDS) behind Nginx, with tests and GitHub Actions CI/CD. Project was canceled before public production release; kept to illustrate architecture and practices.",
       },
       portfolio: {
         link: "https://github.com/Inerio/site-portfolio-cv",
-        title: "Project Git",
+        title: "Project Git Portfolio",
         description: "A portfolio in React",
         details:
           "The website you're currently browsing was designed to showcase my learning and adaptation abilities—skills I continue to refine over time. After dedicating several days to studying the React framework in depth, I decided to take action and develop this portfolio. In just a few days, I was able to build it, integrating essential features while familiarizing myself with modern development best practices. Beyond the creation of the site itself, I also set up a continuous integration solution. This system ensures that every update to the production version is made automatically, ensuring smooth maintenance and uninterrupted deployments. I invite you to follow the evolution of this project on my GitHub. The site is continuously improving, and I still have many ideas and features that I plan to implement in the coming weeks. This project is dear to my heart, and I look forward to sharing new updates and solutions with you!",
