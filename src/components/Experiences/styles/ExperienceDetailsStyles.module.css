@@ -19,7 +19,7 @@
     justify-content: space-evenly;
     background-color: var(--lnk-color);
     text-decoration: none;
-    padding: 0px 5px;
+    padding: 0 5px;
     border-radius: 3px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
@@ -68,6 +68,7 @@
 }
 
 .backBtn {
+  order: 2;
   width: 44px;
   height: 44px;
   display: inline-flex;
@@ -93,6 +94,7 @@
 }
 
 .title {
+  order: 1;
   margin: 0;
   line-height: 1;
   text-wrap: balance;
@@ -100,22 +102,10 @@
 
 @media (width >= 800px) {
   .header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    column-gap: var(--header-gap);
     margin-bottom: 32px;
   }
 
-  .title {
-    grid-column: 2;
-    justify-self: center;
-    text-align: center;
-  }
-
   .backBtn {
-    grid-column: 3;
-    justify-self: start;
     width: 48px;
     height: 48px;
   }

@@ -20,11 +20,11 @@ function Skills() {
         </div>
         <hr />
         <div className={styles.skillList}>
-            <SkillList src={icons.checkmark} skill="JavaScript" />
+            <SkillList src={icons.checkmark} skill="TypeScript" />
             <SkillList src={icons.checkmark} skill="GIT" />
-            <SkillList src={icons.checkmark} skill="React" />
             <SkillList src={icons.checkmark} skill="Angular" />
-            <SkillList src={icons.checkmark} skill="Node" />
+            <SkillList src={icons.checkmark} skill="React" />
+            <SkillList src={icons.checkmark} skill="Spring" />
         </div>
         <p className={styles.space} />
         <h1 className='sectionTitle'>{t('toolsTitle')}</h1>
@@ -38,7 +38,7 @@ function Skills() {
         <hr />
         <div className={styles.toolList}>
             <SkillList src={icons.checkmark} skill="Qlik" />
-            <SkillList src={icons.checkmark} skill="GitHub" />
+            <SkillList src={icons.checkmark} skill="GitAction" />
             <SkillList src={icons.checkmark} skill="Power BI" />
             <SkillList src={icons.checkmark} skill="DBeaver" />
             <SkillList src={icons.checkmark} skill="AWS" />

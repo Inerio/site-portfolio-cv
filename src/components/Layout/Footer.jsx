@@ -1,17 +1,22 @@
-import { useTranslation } from '../../hooks/useTranslation.js'
-import styles from "./styles/FooterStyles.module.css"
+import { useTranslation } from '../../hooks/useTranslation.js';
+import styles from './styles/FooterStyles.module.css';
+
+/** Helper: returns the current year. */
+function getCurrentYear() {
+    return new Date().getFullYear();
+}
 
 function Footer() {
-    const t = useTranslation()
+    const t = useTranslation();
 
     return (
         <section id="footer" className={styles.container}>
             <p>
-                &copy; 2024 Julien De Araujo. <br />
+                &copy; {getCurrentYear()} Julien De Araujo.<br />
                 {t('copyright')}
             </p>
         </section>
-    )
+    );
 }
 
-export default Footer
+export default Footer;
