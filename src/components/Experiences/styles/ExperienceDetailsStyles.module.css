@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   text-align: center;
   min-height: 100dvh;
@@ -104,7 +104,6 @@
   .header {
     margin-bottom: 32px;
   }
-
   .backBtn {
     width: 48px;
     height: 48px;

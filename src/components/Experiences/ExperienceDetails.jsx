@@ -1,33 +1,42 @@
-import { useTranslation } from '../../hooks/useTranslation'
-import styles from './styles/ExperienceDetailsStyles.module.css'
-import { useThemeIcons } from '../../hooks/useThemeIcons'
-import web from '../../assets/pictures/icons/web.svg'
+import { useEffect, useRef } from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
+import styles from './styles/ExperienceDetailsStyles.module.css';
+import { useThemeIcons } from '../../hooks/useThemeIcons';
+import web from '../../assets/pictures/icons/web.svg';
 
 function ExperienceDetails({ experience, setToggleExperience }) {
-    const icons = useThemeIcons()
-    const t = useTranslation()
+    const icons = useThemeIcons();
+    const t = useTranslation();
+    const topRef = useRef(null);
 
-    if (!experience) return null
+    useEffect(() => {
+        requestAnimationFrame(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            if (topRef.current) topRef.current.focus();
+        });
+    }, []);
+
+    if (!experience) return null;
 
     const sectionId = `exp-${String(experience.title || 'details')
         .toLowerCase()
-        .replace(/\s+/g, '-')}`
+        .replace(/\s+/g, '-')}`;
 
     const handleBack = () => {
-        // Close the details view
-        setToggleExperience(false)
-        // Restore previous scroll position (if any) after unmount
-        const y = Number(sessionStorage.getItem('exp:scrollY') || '0')
+        setToggleExperience(false);
+        const y = Number(sessionStorage.getItem('exp:scrollY') || '0');
         setTimeout(() => {
-            window.scrollTo({ top: y, left: 0, behavior: 'auto' })
-        }, 0)
-    }
+            window.scrollTo({ top: y, left: 0, behavior: 'auto' });
+        }, 0);
+    };
 
     return (
         <section id={sectionId} className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.header}>
-                    <h1 className="sectionTitle">{experience.title}</h1>
+                    <h1 ref={topRef} tabIndex={-1} className="sectionTitle">
+                        {experience.title}
+                    </h1>
 
                     <button
                         type="button"
@@ -56,7 +65,7 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default ExperienceDetails
+export default ExperienceDetails;
