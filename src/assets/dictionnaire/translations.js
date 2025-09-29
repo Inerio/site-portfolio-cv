@@ -15,7 +15,7 @@ export const translations = {
           "J’ai mené ce projet de bout en bout : front en Angular, back en Spring Boot + PostgreSQL, API REST. Le déploiement est réalisé sur AWS (EC2/RDS) derrière Nginx, conteneurisé avec Docker, avec des environnements dev/prod. J’ai mis en place les tests (E2E, unitaires, intégration) et une CI/CD GitHub Actions. Le code et l’évolution du projet sont disponibles sur mon GitHub.",
       },
       datalog: {
-        link: "#",
+        showSite: false,
         title: "Projet full stack Datalog",
         description: "Plateforme data & logs",
         details:
@@ -76,7 +76,7 @@ export const translations = {
           "I led this project end to end: Angular front-end, Spring Boot + PostgreSQL back-end, REST API. Deployed on AWS (EC2/RDS) behind Nginx, containerized with Docker, with separate dev/prod environments. I set up tests (E2E, unit, integration) and GitHub Actions CI/CD. The source code and ongoing updates are available on my GitHub.",
       },
       datalog: {
-        link: "#",
+        showSite: false,
         title: "Full-stack project Datalog",
         description: "Data & logs platform",
         details:

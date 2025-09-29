@@ -22,6 +22,11 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         .toLowerCase()
         .replace(/\s+/g, '-')}`;
 
+    const canShowSite =
+        (experience.showSite ?? true) &&
+        Boolean(experience.link) &&
+        experience.link !== '#';
+
     const handleBack = () => {
         setToggleExperience(false);
         const y = Number(sessionStorage.getItem('exp:scrollY') || '0');
@@ -53,15 +58,17 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     <h2>{experience.description}</h2>
                     <p>{experience.details}</p>
 
-                    <a
-                        className={styles.link}
-                        href={experience.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <p>{t('experiences.websiteButton')}</p>
-                        <img src={web} alt="web" />
-                    </a>
+                    {canShowSite && (
+                        <a
+                            className={styles.link}
+                            href={experience.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <p>{t('experiences.websiteButton')}</p>
+                            <img src={web} alt="web" />
+                        </a>
+                    )}
                 </div>
             </div>
         </section>

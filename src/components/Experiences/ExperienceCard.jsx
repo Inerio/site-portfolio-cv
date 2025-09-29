@@ -1,4 +1,4 @@
-import styles from './styles/ExperiencesStyles.module.css'
+import styles from './styles/ExperiencesStyles.module.css';
 
 function ExperienceCard({
     src,
@@ -8,15 +8,21 @@ function ExperienceCard({
     setToggleExperience,
     setSelectedExperience,
     details,
+    showSite,
 }) {
     const handleClick = (e) => {
-        e.preventDefault()
-        // Remember current scroll position so we can restore it when leaving details
-        sessionStorage.setItem('exp:scrollY', String(window.scrollY || 0))
+        e.preventDefault();
+        sessionStorage.setItem('exp:scrollY', String(window.scrollY || 0));
 
-        setToggleExperience(true)
-        setSelectedExperience({ link, title: h3, description: p, details })
-    }
+        setToggleExperience(true);
+        setSelectedExperience({
+            link,
+            title: h3,
+            description: p,
+            details,
+            showSite,
+        });
+    };
 
     return (
         <div className={styles.card} onClick={handleClick}>
@@ -26,7 +32,7 @@ function ExperienceCard({
             <h3 className={styles.title}>{h3}</h3>
             <p className={styles.subtitle}>{p}</p>
         </div>
-    )
+    );
 }
 
-export default ExperienceCard
+export default ExperienceCard;

@@ -1,15 +1,15 @@
-import { useTranslation } from '../../hooks/useTranslation.js'
-import styles from './styles/ExperiencesStyles.module.css'
-import ExperienceCard from './ExperienceCard'
-import portfolio from '../../assets/pictures/logos/portfolio.svg'
-import merieuxLogo from '../../assets/pictures/logos/mérieux.png'
-import abasLogo from '../../assets/pictures/logos/abas-france-logo.png'
-import abbiStudioLogo from '../../assets/pictures/logos/abbi-studio-logo.png'
-import tasukeruLogo from '../../assets/pictures/logos/tasukeru.svg'
-import datalog from '../../assets/pictures/logos/datalog.svg'
+import { useTranslation } from '../../hooks/useTranslation.js';
+import styles from './styles/ExperiencesStyles.module.css';
+import ExperienceCard from './ExperienceCard';
+import portfolio from '../../assets/pictures/logos/portfolio.svg';
+import merieuxLogo from '../../assets/pictures/logos/mérieux.png';
+import abasLogo from '../../assets/pictures/logos/abas-france-logo.png';
+import abbiStudioLogo from '../../assets/pictures/logos/abbi-studio-logo.png';
+import tasukeruLogo from '../../assets/pictures/logos/tasukeru.svg';
+import datalog from '../../assets/pictures/logos/datalog.svg';
 
 function Experiences({ setToggleExperience, setSelectedExperience }) {
-    const t = useTranslation()
+    const t = useTranslation();
 
     return (
         <section id="experiences" className={styles.container}>
@@ -39,6 +39,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                     h3={t('experiences.datalog.title')}
                     p={t('experiences.datalog.description')}
                     details={t('experiences.datalog.details')}
+                    showSite={false}
                     setToggleExperience={setToggleExperience}
                     setSelectedExperience={setSelectedExperience}
                 />
@@ -71,7 +72,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
                 />
             </div>
         </section>
-    )
+    );
 }
 
-export default Experiences
+export default Experiences;
