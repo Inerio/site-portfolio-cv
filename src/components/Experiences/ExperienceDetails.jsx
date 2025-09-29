@@ -13,20 +13,32 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         .toLowerCase()
         .replace(/\s+/g, '-')}`
 
+    const handleBack = () => {
+        // Close the details view
+        setToggleExperience(false)
+        // Restore previous scroll position (if any) after unmount
+        const y = Number(sessionStorage.getItem('exp:scrollY') || '0')
+        setTimeout(() => {
+            window.scrollTo({ top: y, left: 0, behavior: 'auto' })
+        }, 0)
+    }
+
     return (
         <section id={sectionId} className={styles.container}>
             <div className={styles.content}>
-                <button
-                    type="button"
-                    className={styles.backBtn}
-                    onClick={() => setToggleExperience(false)}
-                    aria-label="Back"
-                    title="Back"
-                >
-                    <img src={icons.back} alt="" aria-hidden="true" />
-                </button>
+                <div className={styles.header}>
+                    <h1 className="sectionTitle">{experience.title}</h1>
 
-                <h1 className="sectionTitle">{experience.title}</h1>
+                    <button
+                        type="button"
+                        className={styles.backBtn}
+                        onClick={handleBack}
+                        aria-label="Back"
+                        title="Back"
+                    >
+                        <img src={icons.back} alt="" aria-hidden="true" />
+                    </button>
+                </div>
 
                 <div className={styles.experiencesContainer}>
                     <h2>{experience.description}</h2>

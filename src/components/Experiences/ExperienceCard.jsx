@@ -11,6 +11,9 @@ function ExperienceCard({
 }) {
     const handleClick = (e) => {
         e.preventDefault()
+        // Remember current scroll position so we can restore it when leaving details
+        sessionStorage.setItem('exp:scrollY', String(window.scrollY || 0))
+
         setToggleExperience(true)
         setSelectedExperience({ link, title: h3, description: p, details })
     }
