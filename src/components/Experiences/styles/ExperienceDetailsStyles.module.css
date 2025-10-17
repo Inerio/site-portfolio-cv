@@ -13,30 +13,60 @@
     max-width: 200px;
   }
 
+  /* --- Compact pill button for the "Go to the site" link --- */
   .link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: var(--lnk-color);
+    justify-content: center;
+    gap: 10px;
+
+    /* pill shape */
+    padding: 0px 10px;
+    min-height: 40px;
+    border-radius: 9999px;
+
+    /* brand colors */
+    background: var(--lnk-color);
     text-decoration: none;
-    padding: 0 5px;
-    border-radius: 3px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease;
-    margin: 20px auto;
-    width: fit-content;
+    border: 1px solid transparent;
+
+    /* feel */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+    margin: 0 auto;
+    width: max-content;
   }
   .link:hover {
-    transform: scale(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    filter: saturate(1.05);
+  }
+  .link:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+  }
+  .link:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85),
+      /* inner contrast ring */ 0 0 0 6px rgba(9, 135, 242, 0.45),
+      /* brand ring */ 0 10px 24px rgba(0, 0, 0, 0.22);
   }
   .link img {
-    margin-left: 5px;
-    width: 30px;
-    height: auto;
+    width: 22px;
+    height: 22px;
   }
   .link p {
     color: var(--lnk-text-color);
     margin: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link {
+      transition: none;
+    }
   }
 
   .colorMode {
@@ -58,6 +88,7 @@
   overflow-x: clip;
 }
 
+/* Title + top back button */
 .header {
   --header-gap: clamp(10px, 2vw, 24px);
   display: flex;
@@ -93,6 +124,28 @@
   display: block;
 }
 
+.actionsTop {
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+}
+
+.experiencesContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.footerActions {
+  display: grid;
+  place-items: center;
+  margin-top: 24px;
+}
+
+.backBtnBottom {
+  width: 44px;
+  height: 44px;
+}
+
 .title {
   order: 1;
   margin: 0;
@@ -108,6 +161,17 @@
     width: 48px;
     height: 48px;
   }
+  .backBtnBottom {
+    width: 48px;
+    height: 48px;
+  }
+
+  .actionsTop {
+    margin-bottom: 16px;
+  }
+  .experiencesContainer {
+    gap: 20px;
+  }
 
   .experiencesContainer {
     flex-direction: row;
@@ -120,7 +184,6 @@
   overflow-x: clip;
 }
 
-/* === Désactivation du bouton “Site” === */
 .linkDisabled {
   opacity: 0.5;
   pointer-events: none;

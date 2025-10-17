@@ -35,6 +35,9 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         }, 0);
     };
 
+    // Use custom CTA if provided; fallback to the existing translation
+    const ctaLabel = experience.cta || t('experiences.websiteButton');
+
     return (
         <section id={sectionId} className={styles.container}>
             <div className={styles.content}>
@@ -42,6 +45,22 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     <h1 ref={topRef} tabIndex={-1} className="sectionTitle">
                         {experience.title}
                     </h1>
+
+                    {canShowSite && (
+                        <div className={styles.actionsTop}>
+                            <a
+                                className={styles.link}
+                                href={experience.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${ctaLabel} — ${experience.title} (opens in a new tab)`}
+                                title={ctaLabel}
+                            >
+                                <p>{ctaLabel}</p>
+                                <img src={web} alt="" aria-hidden="true" />
+                            </a>
+                        </div>
+                    )}
 
                     <button
                         type="button"
@@ -57,18 +76,18 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                 <div className={styles.experiencesContainer}>
                     <h2>{experience.description}</h2>
                     <p>{experience.details}</p>
+                </div>
 
-                    {canShowSite && (
-                        <a
-                            className={styles.link}
-                            href={experience.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <p>{t('experiences.websiteButton')}</p>
-                            <img src={web} alt="web" />
-                        </a>
-                    )}
+                <div className={styles.footerActions}>
+                    <button
+                        type="button"
+                        className={`${styles.backBtn} ${styles.backBtnBottom}`}
+                        onClick={handleBack}
+                        aria-label="Back"
+                        title="Back"
+                    >
+                        <img src={icons.back} alt="" aria-hidden="true" />
+                    </button>
                 </div>
             </div>
         </section>

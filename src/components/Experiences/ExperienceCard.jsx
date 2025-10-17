@@ -5,10 +5,11 @@ function ExperienceCard({
     link,
     h3,
     p,
-    setToggleExperience,
-    setSelectedExperience,
     details,
     showSite,
+    cta, // NEW
+    setToggleExperience,
+    setSelectedExperience,
 }) {
     const handleClick = (e) => {
         e.preventDefault();
@@ -21,6 +22,7 @@ function ExperienceCard({
             description: p,
             details,
             showSite,
+            cta,
         });
     };
 
