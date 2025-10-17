@@ -8,6 +8,7 @@
   min-height: 500px;
 
   .profile {
+    width: 200px;
     max-width: 200px;
   }
 
@@ -60,12 +61,16 @@
 
 .colorModeContainer {
   position: relative;
+  width: fit-content;
+  align-self: center;
 }
 
 .colorMode {
   position: absolute;
+  top: 0;
   right: 0;
   width: 30px;
+  z-index: 2;
 }
 
 .colorMode:hover {
@@ -98,8 +103,8 @@
 
 .flagIconMobile {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 28px;
   height: 28px;
 }
@@ -133,6 +138,11 @@
       max-width: 350px;
       width: 350px;
     }
+  }
+
+  .colorModeContainer {
+    width: auto;
+    align-self: initial;
   }
 
   .info {
@@ -175,4 +185,15 @@ body[data-theme="dark"] .toast {
 body[data-theme="light"] .toast {
   background: #fff;
   color: #111;
+}
+
+/* Offsets to slightly overlap the circle edge (mobile & desktop) */
+.colorMode {
+  top: -12px;
+  right: -12px;
+}
+.flagIconMobile {
+  top: -12px;
+  left: -12px;
+  z-index: 2;
 }
