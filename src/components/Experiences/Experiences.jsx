@@ -11,89 +11,48 @@ import datalog from '../../assets/pictures/logos/datalog.svg';
 function Experiences({ setToggleExperience, setSelectedExperience }) {
     const t = useTranslation();
 
-    // Reusable labels with fallback to your existing key
     const labels = {
-        visitSite: t('experiences.labels.visitSite') || t('experiences.websiteButton'),
-        openApp: t('experiences.labels.openApp') || t('experiences.websiteButton'),
-        viewDemo: t('experiences.labels.viewDemo') || t('experiences.websiteButton'),
-        viewCode: t('experiences.labels.viewCode') || t('experiences.websiteButton'),
+        visitSite: t('experiences.labels.visitSite'),
+        openApp: t('experiences.labels.openApp'),
+        viewDemo: t('experiences.labels.viewDemo'),
+        viewCode: t('experiences.labels.viewCode'),
     };
+
+    const exp = (key, logo, cta, showSite = true) => ({
+        src: logo,
+        link: t(`experiences.${key}.link`),
+        h3: t(`experiences.${key}.title`),
+        p: t(`experiences.${key}.description`),
+        details: t(`experiences.${key}.details`),
+        role: t(`experiences.${key}.role`),
+        duration: t(`experiences.${key}.duration`),
+        tags: t(`experiences.${key}.tags`),
+        highlights: t(`experiences.${key}.highlights`),
+        cta,
+        showSite,
+    });
+
+    const experiences = [
+        exp('tasukeru', tasukeruLogo, labels.openApp),
+        exp('portfolio', portfolio, labels.viewCode),
+        exp('datalog', datalog, labels.viewDemo, false),
+        exp('merieux', merieuxLogo, labels.visitSite),
+        exp('abas', abasLogo, labels.visitSite),
+        exp('abbidigital', abbiStudioLogo, labels.visitSite),
+    ];
 
     return (
         <section id="experiences" className={styles.container}>
             <h1 className="sectionTitle">{t('experienceTitle')}</h1>
             <div className={styles.experiencesContainer}>
-                <ExperienceCard
-                    src={tasukeruLogo}
-                    link={t('experiences.tasukeru.link')}
-                    h3={t('experiences.tasukeru.title')}
-                    p={t('experiences.tasukeru.description')}
-                    details={t('experiences.tasukeru.details')}
-                    cta={labels.openApp}
-                    showSite={true}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
-
-                <ExperienceCard
-                    src={portfolio}
-                    link={t('experiences.portfolio.link')}
-                    h3={t('experiences.portfolio.title')}
-                    p={t('experiences.portfolio.description')}
-                    details={t('experiences.portfolio.details')}
-                    cta={labels.viewCode}
-                    showSite={true}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
-
-                <ExperienceCard
-                    src={datalog}
-                    link={t('experiences.datalog.link')}
-                    h3={t('experiences.datalog.title')}
-                    p={t('experiences.datalog.description')}
-                    details={t('experiences.datalog.details')}
-                    cta={labels.viewDemo}
-                    showSite={false}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
-
-                <ExperienceCard
-                    src={merieuxLogo}
-                    link={t('experiences.merieux.link')}
-                    h3={t('experiences.merieux.title')}
-                    p={t('experiences.merieux.description')}
-                    details={t('experiences.merieux.details')}
-                    cta={labels.visitSite}
-                    showSite={true}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
-
-                <ExperienceCard
-                    src={abasLogo}
-                    link={t('experiences.abas.link')}
-                    h3={t('experiences.abas.title')}
-                    p={t('experiences.abas.description')}
-                    details={t('experiences.abas.details')}
-                    cta={labels.visitSite}
-                    showSite={true}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
-
-                <ExperienceCard
-                    src={abbiStudioLogo}
-                    link={t('experiences.abbidigital.link')}
-                    h3={t('experiences.abbidigital.title')}
-                    p={t('experiences.abbidigital.description')}
-                    details={t('experiences.abbidigital.details')}
-                    cta={labels.visitSite}
-                    showSite={true}
-                    setToggleExperience={setToggleExperience}
-                    setSelectedExperience={setSelectedExperience}
-                />
+                {experiences.map((props) => (
+                    <ExperienceCard
+                        key={props.h3}
+                        {...props}
+                        setToggleExperience={setToggleExperience}
+                        setSelectedExperience={setSelectedExperience}
+                    />
+                ))}
             </div>
         </section>
     );

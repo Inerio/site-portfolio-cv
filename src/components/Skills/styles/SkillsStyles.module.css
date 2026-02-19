@@ -12,6 +12,14 @@
   img {
     width: 20px;
   }
+
+  hr {
+    width: 150px;
+    height: 1px;
+    border: none;
+    background-color: var(--text-color);
+    margin: 30px auto;
+  }
 }
 
 .skillList {
@@ -32,20 +40,8 @@
   max-width: 30ch;
 }
 
-p.space {
+.space {
   margin: 25px;
-}
-
-hr {
-  width: 150px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
-}
-
-br {
-  margin: 20px;
 }
 
 @media (width >= 800px) {
@@ -57,7 +53,7 @@ br {
       font-size: 20px;
     }
   }
-  hr {
+  .container hr {
     width: 300px;
   }
 }

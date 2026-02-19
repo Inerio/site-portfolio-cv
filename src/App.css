@@ -22,6 +22,11 @@
   --footer-text-color: #bbb;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   background-color: var(--background-color);
   display: flex;
@@ -37,7 +42,7 @@ body {
 
 h1,
 h2,
-H3,
+h3,
 p {
   color: var(--text-color);
   margin: 0;

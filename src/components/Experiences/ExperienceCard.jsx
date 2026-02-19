@@ -7,12 +7,15 @@ function ExperienceCard({
     p,
     details,
     showSite,
-    cta, // NEW
+    cta,
+    role,
+    duration,
+    tags,
+    highlights,
     setToggleExperience,
     setSelectedExperience,
 }) {
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
         sessionStorage.setItem('exp:scrollY', String(window.scrollY || 0));
 
         setToggleExperience(true);
@@ -23,6 +26,11 @@ function ExperienceCard({
             details,
             showSite,
             cta,
+            logo: src,
+            role,
+            duration,
+            tags,
+            highlights,
         });
     };
 

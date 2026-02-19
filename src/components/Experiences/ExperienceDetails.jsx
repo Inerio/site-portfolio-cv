@@ -35,56 +35,102 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         }, 0);
     };
 
-    // Use custom CTA if provided; fallback to the existing translation
     const ctaLabel = experience.cta || t('experiences.websiteButton');
+    const tags = Array.isArray(experience.tags) ? experience.tags : [];
+    const highlights = Array.isArray(experience.highlights) ? experience.highlights : [];
 
     return (
         <section id={sectionId} className={styles.container}>
             <div className={styles.content}>
-                <div className={styles.header}>
-                    <h1 ref={topRef} tabIndex={-1} className="sectionTitle">
-                        {experience.title}
-                    </h1>
+                {/* Back button */}
+                <button
+                    type="button"
+                    className={styles.backBtn}
+                    onClick={handleBack}
+                    aria-label={t('experienceDetails.backLabel')}
+                    title={t('experienceDetails.backLabel')}
+                >
+                    <img src={icons.back} alt="" aria-hidden="true" />
+                </button>
 
-                    {canShowSite && (
-                        <div className={styles.actionsTop}>
+                {/* Hero: logo + title + meta */}
+                <div className={styles.hero}>
+                    <div className={styles.heroLogo}>
+                        <img src={experience.logo} alt="" aria-hidden="true" />
+                    </div>
+                    <div className={styles.heroInfo}>
+                        <h1 ref={topRef} tabIndex={-1}>{experience.title}</h1>
+                        <h2 className={styles.role}>{experience.role || experience.description}</h2>
+                        {experience.duration && (
+                            <span className={styles.duration}>{experience.duration}</span>
+                        )}
+                        {canShowSite && (
                             <a
                                 className={styles.link}
                                 href={experience.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label={`${ctaLabel} — ${experience.title} (opens in a new tab)`}
+                                aria-label={`${ctaLabel} — ${experience.title}`}
                                 title={ctaLabel}
                             >
                                 <p>{ctaLabel}</p>
                                 <img src={web} alt="" aria-hidden="true" />
                             </a>
-                        </div>
-                    )}
+                        )}
+                    </div>
+                </div>
 
+                {/* Tech stack tags */}
+                {tags.length > 0 && (
+                    <div className={styles.section}>
+                        <h3>{t('experienceDetails.techStack')}</h3>
+                        <div className={styles.tags}>
+                            {tags.map((tag) => (
+                                <span key={tag} className={styles.tag}>{tag}</span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Highlights */}
+                {highlights.length > 0 && (
+                    <div className={styles.section}>
+                        <h3>{t('experienceDetails.highlights')}</h3>
+                        <ul className={styles.highlights}>
+                            {highlights.map((item, i) => (
+                                <li key={i}>
+                                    <img src={icons.checkmark} alt="" aria-hidden="true" />
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {/* About / Description */}
+                <div className={styles.section}>
+                    <h3>{t('experienceDetails.about')}</h3>
+                    <p className={styles.details}>{experience.details}</p>
+                </div>
+
+                {/* Gallery placeholder */}
+                <div className={styles.section}>
+                    <h3>{t('experienceDetails.gallery')}</h3>
+                    <div className={styles.gallery}>
+                        <div className={styles.galleryPlaceholder}>
+                            <p>{t('experienceDetails.galleryPlaceholder')}</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bottom back button */}
+                <div className={styles.footerActions}>
                     <button
                         type="button"
                         className={styles.backBtn}
                         onClick={handleBack}
-                        aria-label="Back"
-                        title="Back"
-                    >
-                        <img src={icons.back} alt="" aria-hidden="true" />
-                    </button>
-                </div>
-
-                <div className={styles.experiencesContainer}>
-                    <h2>{experience.description}</h2>
-                    <p>{experience.details}</p>
-                </div>
-
-                <div className={styles.footerActions}>
-                    <button
-                        type="button"
-                        className={`${styles.backBtn} ${styles.backBtnBottom}`}
-                        onClick={handleBack}
-                        aria-label="Back"
-                        title="Back"
+                        aria-label={t('experienceDetails.backLabel')}
+                        title={t('experienceDetails.backLabel')}
                     >
                         <img src={icons.back} alt="" aria-hidden="true" />
                     </button>

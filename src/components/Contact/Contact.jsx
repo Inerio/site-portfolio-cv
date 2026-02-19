@@ -2,8 +2,7 @@ import { useTranslation } from '../../hooks/useTranslation'
 import styles from './styles/ContactStyles.module.css'
 
 function Contact() {
-    //t for translationKey
-    const t = useTranslation()
+    const t = useTranslation();
 
     return <section id='contact' className={styles.container}>
         <h1 className="sectionTitle">{t('contactTitle')}</h1>
@@ -25,7 +24,7 @@ function Contact() {
                     Email
                 </label>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
                     id="email"
                     placeholder={t('email')}

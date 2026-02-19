@@ -4,12 +4,10 @@ import { useThemeIcons } from '../../hooks/useThemeIcons';
 import { useTranslation } from '../../hooks/useTranslation';
 
 function Skills() {
-    //t for translationKey
-    const t = useTranslation()
-
+    const t = useTranslation();
     const icons = useThemeIcons();
 
-    return < section id="skills" className={styles.container} >
+    return <section id="skills" className={styles.container}>
         <h1 className='sectionTitle'>{t('skillTitle')}</h1>
         <div className={styles.skillList}>
             <SkillList src={icons.checkmark} skill="Java" />
@@ -44,7 +42,7 @@ function Skills() {
             <SkillList src={icons.checkmark} skill="DBeaver" />
             <SkillList src={icons.checkmark} skill="AWS" />
         </div>
-    </section >;
+    </section>;
 }
 
 export default Skills
