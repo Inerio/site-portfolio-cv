@@ -8,7 +8,7 @@ export const translations = {
     experienceTitle: "Expériences",
     experiences: {
       tasukeru: {
-        link: "https://app.tasukeru.org",
+        link: "https://tasukeru.primary-key.ovh",
         title: "Projet full stack Tasukeru",
         description: "Un gestionnaire de tâches",
         details:
@@ -75,7 +75,7 @@ export const translations = {
     experienceTitle: "Experiences ",
     experiences: {
       tasukeru: {
-        link: "https://app.tasukeru.org",
+        link: "https://tasukeru.primary-key.ovh",
         title: "Full stack project Tasukeru",
         description: "A task manager",
         details:
