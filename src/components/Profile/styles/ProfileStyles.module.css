@@ -8,8 +8,7 @@
   min-height: 500px;
 
   .profile {
-    width: 200px;
-    max-width: 200px;
+    width: min(200px, 50vw);
   }
 
   span {

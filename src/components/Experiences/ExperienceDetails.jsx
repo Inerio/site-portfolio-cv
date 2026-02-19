@@ -113,15 +113,17 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     <p className={styles.details}>{experience.details}</p>
                 </div>
 
-                {/* Gallery placeholder */}
-                <div className={styles.section}>
-                    <h3>{t('experienceDetails.gallery')}</h3>
-                    <div className={styles.gallery}>
-                        <div className={styles.galleryPlaceholder}>
-                            <p>{t('experienceDetails.galleryPlaceholder')}</p>
+                {/* Gallery — set showGallery: true in translations to enable */}
+                {experience.showGallery && (
+                    <div className={styles.section}>
+                        <h3>{t('experienceDetails.gallery')}</h3>
+                        <div className={styles.gallery}>
+                            <div className={styles.galleryPlaceholder}>
+                                <p>{t('experienceDetails.galleryPlaceholder')}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
 
                 {/* Bottom back button */}
                 <div className={styles.footerActions}>

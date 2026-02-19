@@ -21,6 +21,7 @@ export const translations = {
         description: "Un gestionnaire de tâches",
         role: "Développeur Full Stack",
         duration: "~3 mois",
+        showGallery: false,
         tags: ["Angular", "Spring Boot", "PostgreSQL", "Docker", "AWS", "CI/CD"],
         highlights: [
           "Application collaborative avec partage de boards en temps réel (SSE)",
@@ -34,6 +35,7 @@ export const translations = {
       },
       datalog: {
         showSite: false,
+        showGallery: false,
         title: "Projet full stack Datalog",
         description: "Plateforme data & logs",
         role: "Développeur Full Stack",
@@ -54,6 +56,7 @@ export const translations = {
         description: "Un portfolio en React",
         role: "Développeur Front-end",
         duration: "En continu",
+        showGallery: false,
         tags: ["React", "Vite", "CSS Modules", "GitHub Actions"],
         highlights: [
           "Apprentissage rapide de React en quelques jours",
@@ -70,6 +73,7 @@ export const translations = {
         description: "Data developer / Full Stack",
         role: "Data Developer / Full Stack",
         duration: "2 ans",
+        showGallery: false,
         tags: ["React", "Data Analysis", "Qlik", "SQL", "REST API"],
         highlights: [
           "Expérience la plus longue et la plus formatrice",
@@ -86,6 +90,7 @@ export const translations = {
         description: "Développeur Java",
         role: "Développeur Java",
         duration: "1 an",
+        showGallery: false,
         tags: ["Java", "ERP", "ABAS"],
         highlights: [
           "Première expérience professionnelle en entreprise",
@@ -102,6 +107,7 @@ export const translations = {
         description: "Développeur Angular",
         role: "Développeur Angular (Stage)",
         duration: "6 mois",
+        showGallery: false,
         tags: ["Angular", "GitHub", "Trello", "Linux", "Agile"],
         highlights: [
           "Apprentissage du framework Angular",
@@ -151,6 +157,7 @@ export const translations = {
         description: "A task manager",
         role: "Full Stack Developer",
         duration: "~3 months",
+        showGallery: false,
         tags: ["Angular", "Spring Boot", "PostgreSQL", "Docker", "AWS", "CI/CD"],
         highlights: [
           "Collaborative app with real-time board sharing (SSE)",
@@ -164,6 +171,7 @@ export const translations = {
       },
       datalog: {
         showSite: false,
+        showGallery: false,
         title: "Full-stack project Datalog",
         description: "Data & logs platform",
         role: "Full Stack Developer",
@@ -184,6 +192,7 @@ export const translations = {
         description: "A portfolio in React",
         role: "Front-end Developer",
         duration: "Ongoing",
+        showGallery: false,
         tags: ["React", "Vite", "CSS Modules", "GitHub Actions"],
         highlights: [
           "Rapid React learning in just a few days",
@@ -200,6 +209,7 @@ export const translations = {
         description: "Data Developer / Full Stack",
         role: "Data Developer / Full Stack",
         duration: "2 years",
+        showGallery: false,
         tags: ["React", "Data Analysis", "Qlik", "SQL", "REST API"],
         highlights: [
           "Longest and most formative experience",
@@ -216,6 +226,7 @@ export const translations = {
         description: "Java Developer",
         role: "Java Developer",
         duration: "1 year",
+        showGallery: false,
         tags: ["Java", "ERP", "ABAS"],
         highlights: [
           "First professional experience in a company",
@@ -232,6 +243,7 @@ export const translations = {
         description: "Angular Developer",
         role: "Angular Developer (Internship)",
         duration: "6 months",
+        showGallery: false,
         tags: ["Angular", "GitHub", "Trello", "Linux", "Agile"],
         highlights: [
           "Learning the Angular framework",

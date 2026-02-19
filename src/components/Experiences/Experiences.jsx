@@ -28,6 +28,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
         duration: t(`experiences.${key}.duration`),
         tags: t(`experiences.${key}.tags`),
         highlights: t(`experiences.${key}.highlights`),
+        showGallery: t(`experiences.${key}.showGallery`),
         cta,
         showSite,
     });

@@ -12,6 +12,7 @@ function ExperienceCard({
     duration,
     tags,
     highlights,
+    showGallery,
     setToggleExperience,
     setSelectedExperience,
 }) {
@@ -31,6 +32,7 @@ function ExperienceCard({
             duration,
             tags,
             highlights,
+            showGallery,
         });
     };
 

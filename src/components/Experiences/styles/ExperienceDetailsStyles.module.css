@@ -55,8 +55,8 @@
 }
 
 .heroLogo {
-  width: 100px;
-  height: 100px;
+  width: min(100px, 28vw);
+  height: min(100px, 28vw);
   background: var(--project-card-bg);
   border-radius: 20px;
   display: grid;

@@ -6,7 +6,7 @@
 
 /* ====== CARD ====== */
 .card {
-  width: clamp(220px, 80vw, 260px);
+  width: min(260px, 80vw);
   flex: 0 0 auto;
   text-decoration: none;
   color: inherit;
