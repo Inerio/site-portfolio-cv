@@ -7,6 +7,13 @@ import abasLogo from '../../assets/pictures/logos/abas-france-logo.png';
 import abbiStudioLogo from '../../assets/pictures/logos/abbi-studio-logo.png';
 import tasukeruLogo from '../../assets/pictures/logos/tasukeru.svg';
 import datalog from '../../assets/pictures/logos/datalog.svg';
+import movieseekerLogo from '../../assets/pictures/logos/movieseeker.svg';
+
+// -- Gallery images (import your screenshots here) --
+import tasukeruThumb from '../../assets/pictures/thumbnail/tasukeru_thumbnail.png';
+import msThumb1 from '../../assets/pictures/thumbnail/movieseeker_thumbnail1.png';
+import msThumb2 from '../../assets/pictures/thumbnail/movieseeker_thumbnail2.png';
+import msThumb3 from '../../assets/pictures/thumbnail/movieseeker_thumbnail3.png';
 
 function Experiences({ setToggleExperience, setSelectedExperience }) {
     const t = useTranslation();
@@ -18,7 +25,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
         viewCode: t('experiences.labels.viewCode'),
     };
 
-    const exp = (key, logo, cta, showSite = true) => ({
+    const exp = (key, logo, cta, { showSite = true, galleryImages = [] } = {}) => ({
         src: logo,
         link: t(`experiences.${key}.link`),
         h3: t(`experiences.${key}.title`),
@@ -29,14 +36,16 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
         tags: t(`experiences.${key}.tags`),
         highlights: t(`experiences.${key}.highlights`),
         showGallery: t(`experiences.${key}.showGallery`),
+        galleryImages,
         cta,
         showSite,
     });
 
     const experiences = [
-        exp('tasukeru', tasukeruLogo, labels.openApp),
+        exp('tasukeru', tasukeruLogo, labels.openApp, { galleryImages: [tasukeruThumb] }),
+        exp('movieseeker', movieseekerLogo, labels.viewCode, { galleryImages: [msThumb1, msThumb2, msThumb3] }),
         exp('portfolio', portfolio, labels.viewCode),
-        exp('datalog', datalog, labels.viewDemo, false),
+        exp('datalog', datalog, labels.viewDemo, { showSite: false }),
         exp('merieux', merieuxLogo, labels.visitSite),
         exp('abas', abasLogo, labels.visitSite),
         exp('abbidigital', abbiStudioLogo, labels.visitSite),

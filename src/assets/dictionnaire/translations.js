@@ -40,6 +40,31 @@ export const translations = {
         details:
           "J'ai créé Tasukeru pour faciliter l'organisation au quotidien et parce que j'apprécie la philosophie Kanban japonaise. Sur près de trois mois, j'ai conçu une application full-stack : Angular pour le front, Spring Boot + PostgreSQL pour le back, avec une API REST. L'application est collaborative : on peut partager l'ID d'un board pour travailler à plusieurs, et les mises à jour arrivent en temps réel grâce aux Server-Sent Events. J'ai surmonté des points techniques comme le drag-and-drop côté front (listes/colonnes/cartes) et la diffusion temps réel, le tout sécurisé par des tests unitaires, d'intégration et E2E. Le déploiement est dockerisé sur AWS (EC2/RDS derrière Nginx) avec des environnements dev/prod et une CI/CD GitHub Actions ; l'architecture a été pensée pour minimiser les coûts sans sacrifier les performances. Le projet est open source, et le code ainsi que les mises à jour sont disponibles sur mon GitHub.",
       },
+      movieseeker: {
+        link: "https://github.com/Inerio/cine-search",
+        title: "Projet full stack MovieSeeker",
+        description: "Recherche de films par IA",
+        role: "Développeur Full Stack",
+        duration: "~2 mois",
+        showGallery: true,
+        tags: [
+          "Angular",
+          "Spring Boot",
+          "Java 21",
+          "TMDB API",
+          "Groq AI",
+          "Docker",
+        ],
+        highlights: [
+          "Recherche intelligente de films par langage naturel (IA Groq)",
+          "Intégration de l'API TMDB pour les données films et séries",
+          "Pages de détail complètes : casting, bandes-annonces, recommandations",
+          "Application bilingue français / anglais",
+          "Déploiement conteneurisé avec Docker Compose",
+        ],
+        details:
+          "MovieSeeker est une application de recherche de films et séries que j'ai développée en full stack. L'idée est née d'une envie d'aller au-delà de la simple recherche par mots-clés : grâce à l'intégration de l'IA Groq, on peut décrire un film en langage naturel (« un film avec des robots qui voyagent dans le temps ») et obtenir des résultats pertinents. Le front-end est développé en Angular 19, le back-end en Spring Boot 3.5 avec Java 21, et les données proviennent de l'API TMDB. L'application propose des pages de détail riches (casting, bandes-annonces, recommandations), un système de tendances, et une interface bilingue français/anglais. Le tout est conteneurisé avec Docker Compose pour un déploiement simple. Le projet est open source et disponible sur mon GitHub.",
+      },
       datalog: {
         showSite: false,
         showGallery: false,
@@ -189,6 +214,31 @@ export const translations = {
         ],
         details:
           "I built Tasukeru to make day-to-day organization simpler and because I'm a fan of the Japanese Kanban system. Over almost three months I designed a full-stack app: Angular on the front end, Spring Boot + PostgreSQL on the back end, exposed through a REST API. It's collaborative: you can share a board ID to work with others, and updates stream in real time via Server-Sent Events. I worked through tricky parts such as front-end drag-and-drop (lists/columns/cards) and the real-time pipeline, backed by unit, integration, and end-to-end tests. The app is Dockerized and deployed on AWS (EC2/RDS behind Nginx) with separate dev/prod environments and GitHub Actions CI/CD; the architecture is tuned to keep costs low while remaining performant. The project is open source, and the code and ongoing updates are available on my GitHub.",
+      },
+      movieseeker: {
+        link: "https://github.com/Inerio/cine-search",
+        title: "Full stack project MovieSeeker",
+        description: "AI-powered movie search",
+        role: "Full Stack Developer",
+        duration: "~2 months",
+        showGallery: true,
+        tags: [
+          "Angular",
+          "Spring Boot",
+          "Java 21",
+          "TMDB API",
+          "Groq AI",
+          "Docker",
+        ],
+        highlights: [
+          "Smart movie search using natural language (Groq AI)",
+          "TMDB API integration for movie and TV show data",
+          "Rich detail pages: cast, trailers, recommendations",
+          "Bilingual application (French / English)",
+          "Containerized deployment with Docker Compose",
+        ],
+        details:
+          "MovieSeeker is a movie and TV show search app that I developed full stack. The idea came from wanting to go beyond simple keyword search: thanks to Groq AI integration, you can describe a movie in natural language ('a film with robots that travel through time') and get relevant results. The front end is built with Angular 19, the back end with Spring Boot 3.5 and Java 21, and data comes from the TMDB API. The app features rich detail pages (cast, trailers, recommendations), a trending section, and a bilingual French/English interface. Everything is containerized with Docker Compose for easy deployment. The project is open source and available on my GitHub.",
       },
       datalog: {
         showSite: false,

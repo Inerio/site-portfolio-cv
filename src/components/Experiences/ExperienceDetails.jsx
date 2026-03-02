@@ -38,6 +38,7 @@ function ExperienceDetails({ experience, setToggleExperience }) {
     const ctaLabel = experience.cta || t('experiences.websiteButton');
     const tags = Array.isArray(experience.tags) ? experience.tags : [];
     const highlights = Array.isArray(experience.highlights) ? experience.highlights : [];
+    const galleryImages = Array.isArray(experience.galleryImages) ? experience.galleryImages : [];
 
     return (
         <section id={sectionId} className={styles.container}>
@@ -118,9 +119,21 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     <div className={styles.section}>
                         <h3>{t('experienceDetails.gallery')}</h3>
                         <div className={styles.gallery}>
-                            <div className={styles.galleryPlaceholder}>
-                                <p>{t('experienceDetails.galleryPlaceholder')}</p>
-                            </div>
+                            {galleryImages.length > 0 ? (
+                                galleryImages.map((src, i) => (
+                                    <img
+                                        key={i}
+                                        className={styles.galleryImage}
+                                        src={src}
+                                        alt={`${experience.title} screenshot ${i + 1}`}
+                                        loading="lazy"
+                                    />
+                                ))
+                            ) : (
+                                <div className={styles.galleryPlaceholder}>
+                                    <p>{t('experienceDetails.galleryPlaceholder')}</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}

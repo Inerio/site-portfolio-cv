@@ -13,6 +13,7 @@ function ExperienceCard({
     tags,
     highlights,
     showGallery,
+    galleryImages,
     setToggleExperience,
     setSelectedExperience,
 }) {
@@ -33,6 +34,7 @@ function ExperienceCard({
             tags,
             highlights,
             showGallery,
+            galleryImages,
         });
     };
 
