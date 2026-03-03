@@ -15,13 +15,15 @@
     display: flex;
     gap: 25px;
     justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+      display: block;
+    }
 
     a {
       margin: 0;
-
-      img {
-        width: 30px;
-      }
     }
   }
 
@@ -34,28 +36,23 @@
     cursor: pointer;
     transform: scale(1.05);
   }
+}
 
-  button {
-    background-color: var(--btn-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-  }
-
-  button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  }
+/* Icon button (theme toggle, language toggle, email copy) */
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+.iconBtn:hover {
+  transform: scale(1.05);
+}
+.iconBtn:focus-visible {
+  outline: 3px solid var(--lnk-color);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .colorModeContainer {
@@ -66,15 +63,14 @@
 
 .colorMode {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
+  top: -12px;
+  right: -12px;
   z-index: 2;
-}
 
-.colorMode:hover {
-  cursor: pointer;
-  transform: scale(1.05);
+  img {
+    width: 30px;
+    display: block;
+  }
 }
 
 .description {
@@ -91,26 +87,25 @@
   position: absolute;
   top: -10px;
   left: -30px;
-  width: 28px;
-  height: 28px;
-}
 
-.flagIconDesktop:hover {
-  cursor: pointer;
-  transform: scale(1.05);
+  img {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
 }
 
 .flagIconMobile {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-}
+  top: -12px;
+  left: -12px;
+  z-index: 2;
 
-.flagIconMobile:hover {
-  cursor: pointer;
-  transform: scale(1.05);
+  img {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
 }
 
 .info {
@@ -168,8 +163,8 @@
   top: 24px;
   transform: translateX(-50%);
   padding: 10px 14px;
-  border-radius: 9999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lg);
   font-weight: 700;
   letter-spacing: 0.2px;
   z-index: 1000;
@@ -184,15 +179,4 @@ body[data-theme="dark"] .toast {
 body[data-theme="light"] .toast {
   background: #fff;
   color: #111;
-}
-
-/* Offsets to slightly overlap the circle edge (mobile & desktop) */
-.colorMode {
-  top: -12px;
-  right: -12px;
-}
-.flagIconMobile {
-  top: -12px;
-  left: -12px;
-  z-index: 2;
 }

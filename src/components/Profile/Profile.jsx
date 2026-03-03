@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import styles from './styles/ProfileStyles.module.css';
 import profileImg from '../../assets/pictures/profile-img.png';
 import CV from '../../assets/documents/CV-Julien-De-Araujo.pdf';
@@ -9,25 +9,24 @@ import { useLanguageIcons } from '../../hooks/useLanguageIcons.js';
 import { useTranslation } from '../../hooks/useTranslation.js';
 import LazyImage from '../common/LazyImage';
 
+const EMAIL = 'julien.dearaujo.pro@gmail.com';
+
 function Profile() {
     const { toggleTheme } = useTheme();
     const { toggleLanguage } = useLanguage();
     const themeIcons = useThemeIcons();
     const languageIcons = useLanguageIcons();
-
     const t = useTranslation();
 
     const [copied, setCopied] = useState(false);
-    const email = 'julien.dearaujo.pro@gmail.com';
 
-    const handleCopyEmail = async (e) => {
-        e.preventDefault();
+    const handleCopyEmail = useCallback(async () => {
         try {
-            await navigator.clipboard.writeText(email);
+            await navigator.clipboard.writeText(EMAIL);
             setCopied(true);
         } catch {
             const ta = document.createElement('textarea');
-            ta.value = email;
+            ta.value = EMAIL;
             ta.style.position = 'fixed';
             ta.style.opacity = '0';
             document.body.appendChild(ta);
@@ -37,7 +36,7 @@ function Profile() {
             setCopied(true);
         }
         window.setTimeout(() => setCopied(false), 1600);
-    };
+    }, []);
 
     return (
         <section id="profile" className={styles.container}>
@@ -50,28 +49,34 @@ function Profile() {
                     />
                 </div>
 
-                <img
-                    className={styles.colorMode}
-                    src={themeIcons.theme}
-                    alt="Color mode icon"
+                <button
+                    type="button"
+                    className={`${styles.iconBtn} ${styles.colorMode}`}
                     onClick={toggleTheme}
-                />
-                <img
-                    className={styles.flagIconMobile}
-                    src={languageIcons.language}
-                    alt="Current language flag"
+                    aria-label="Toggle theme"
+                >
+                    <img src={themeIcons.theme} alt="" aria-hidden="true" />
+                </button>
+                <button
+                    type="button"
+                    className={`${styles.iconBtn} ${styles.flagIconMobile}`}
                     onClick={toggleLanguage}
-                />
+                    aria-label="Toggle language"
+                >
+                    <img src={languageIcons.language} alt="" aria-hidden="true" />
+                </button>
             </div>
 
             <div className={styles.info}>
                 <h1 className={styles.flagContainer}>
-                    <img
-                        className={styles.flagIconDesktop}
-                        src={languageIcons.language}
-                        alt="Current language flag"
+                    <button
+                        type="button"
+                        className={`${styles.iconBtn} ${styles.flagIconDesktop}`}
                         onClick={toggleLanguage}
-                    />
+                        aria-label="Toggle language"
+                    >
+                        <img src={languageIcons.language} alt="" aria-hidden="true" />
+                    </button>
                     Julien
                     <br />
                     De Araujo
@@ -80,20 +85,18 @@ function Profile() {
                 <h2>{t('jobTitle')}</h2>
 
                 <span>
-                    <a
+                    <button
+                        type="button"
+                        className={styles.iconBtn}
                         onClick={handleCopyEmail}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') handleCopyEmail(e);
-                        }}
-                        title={email}
+                        aria-label={t('copyEmailAria')}
+                        title={EMAIL}
                     >
-                        <img src={themeIcons.at} alt="Email icon" />
-                    </a>
+                        <img src={themeIcons.at} alt="" aria-hidden="true" />
+                    </button>
 
                     <a href="https://github.com/Inerio" target="_blank" rel="noopener noreferrer">
-                        <img src={themeIcons.github} alt="Github icon" />
+                        <img src={themeIcons.github} alt="Github" />
                     </a>
 
                     <a
@@ -101,16 +104,14 @@ function Profile() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={themeIcons.linkedin} alt="Linkedin icon" />
+                        <img src={themeIcons.linkedin} alt="Linkedin" />
                     </a>
                 </span>
 
                 <p className={styles.description}>{t('description')}</p>
 
-                <a href={CV} download>
-                    <button type="button" className="hover btn">
-                        {t('resumeButton')}
-                    </button>
+                <a href={CV} download className="btn">
+                    {t('resumeButton')}
                 </a>
             </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import styles from './styles/ExperienceDetailsStyles.module.css';
 import { useThemeIcons } from '../../hooks/useThemeIcons';
@@ -10,11 +10,20 @@ function ExperienceDetails({ experience, setToggleExperience }) {
     const topRef = useRef(null);
 
     useEffect(() => {
-        requestAnimationFrame(() => {
+        const raf = requestAnimationFrame(() => {
             window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
             if (topRef.current) topRef.current.focus();
         });
+        return () => cancelAnimationFrame(raf);
     }, []);
+
+    const handleBack = useCallback(() => {
+        setToggleExperience(false);
+        const y = Number(sessionStorage.getItem('exp:scrollY') || '0');
+        requestAnimationFrame(() => {
+            window.scrollTo({ top: y, left: 0, behavior: 'auto' });
+        });
+    }, [setToggleExperience]);
 
     if (!experience) return null;
 
@@ -27,14 +36,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
         Boolean(experience.link) &&
         experience.link !== '#';
 
-    const handleBack = () => {
-        setToggleExperience(false);
-        const y = Number(sessionStorage.getItem('exp:scrollY') || '0');
-        setTimeout(() => {
-            window.scrollTo({ top: y, left: 0, behavior: 'auto' });
-        }, 0);
-    };
-
     const ctaLabel = experience.cta || t('experiences.websiteButton');
     const tags = Array.isArray(experience.tags) ? experience.tags : [];
     const highlights = Array.isArray(experience.highlights) ? experience.highlights : [];
@@ -43,7 +44,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
     return (
         <section id={sectionId} className={styles.container}>
             <div className={styles.content}>
-                {/* Back button */}
                 <button
                     type="button"
                     className={styles.backBtn}
@@ -54,7 +54,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     <img src={icons.back} alt="" aria-hidden="true" />
                 </button>
 
-                {/* Hero: logo + title + meta */}
                 <div className={styles.hero}>
                     <div className={styles.heroLogo}>
                         <img src={experience.logo} alt="" aria-hidden="true" />
@@ -81,7 +80,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     </div>
                 </div>
 
-                {/* Tech stack tags */}
                 {tags.length > 0 && (
                     <div className={styles.section}>
                         <h3>{t('experienceDetails.techStack')}</h3>
@@ -93,7 +91,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     </div>
                 )}
 
-                {/* Highlights */}
                 {highlights.length > 0 && (
                     <div className={styles.section}>
                         <h3>{t('experienceDetails.highlights')}</h3>
@@ -108,13 +105,11 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     </div>
                 )}
 
-                {/* About / Description */}
                 <div className={styles.section}>
                     <h3>{t('experienceDetails.about')}</h3>
                     <p className={styles.details}>{experience.details}</p>
                 </div>
 
-                {/* Gallery — set showGallery: true in translations to enable */}
                 {experience.showGallery && (
                     <div className={styles.section}>
                         <h3>{t('experienceDetails.gallery')}</h3>
@@ -138,7 +133,6 @@ function ExperienceDetails({ experience, setToggleExperience }) {
                     </div>
                 )}
 
-                {/* Bottom back button */}
                 <div className={styles.footerActions}>
                     <button
                         type="button"

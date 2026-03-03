@@ -10,12 +10,12 @@ function Footer() {
     const t = useTranslation();
 
     return (
-        <section id="footer" className={styles.container}>
+        <footer id="footer" className={styles.container}>
             <p>
                 &copy; {getCurrentYear()} Julien De Araujo.<br />
                 {t('copyright')}
             </p>
-        </section>
+        </footer>
     );
 }
 

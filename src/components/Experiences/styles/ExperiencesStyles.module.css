@@ -10,21 +10,28 @@
   flex: 0 0 auto;
   text-decoration: none;
   color: inherit;
-  transition: transform 200ms ease-in-out;
+  cursor: pointer;
+  transition: transform var(--transition-base);
 }
 
 .card:hover {
   transform: scale(1.05);
 }
 
+.card:focus-visible {
+  outline: 3px solid var(--lnk-color);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
 .logoFrame {
   width: 100%;
-  aspect-ratio: 1 / 1; /* carré */
+  aspect-ratio: 1 / 1;
   background: var(--project-card-bg);
-  border-radius: 20px;
+  border-radius: var(--radius-md);
   display: grid;
   place-items: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-lg);
 }
 
 .logo {
@@ -35,7 +42,6 @@
 }
 
 .title {
-  line-clamp: default;
   margin-top: 10px;
   line-height: 1.2;
   min-height: 2.6em;
@@ -46,7 +52,6 @@
 }
 
 .subtitle {
-  line-clamp: default;
   line-height: 1.2;
   min-height: 1.6em;
   display: -webkit-box;
