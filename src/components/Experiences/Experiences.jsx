@@ -14,6 +14,9 @@ import tasukeruThumb from '../../assets/pictures/thumbnail/tasukeru_thumbnail.pn
 import msThumb1 from '../../assets/pictures/thumbnail/movieseeker_thumbnail1.png';
 import msThumb2 from '../../assets/pictures/thumbnail/movieseeker_thumbnail2.png';
 import msThumb3 from '../../assets/pictures/thumbnail/movieseeker_thumbnail3.png';
+import merieuxThumb from '../../assets/pictures/thumbnail/mérieuxnutrisciences_thumbnail.png';
+import abasThumb from '../../assets/pictures/thumbnail/abas_thumbnail.png';
+import abbiThumb from '../../assets/pictures/thumbnail/abbidigital_thumbnail.png';
 
 function Experiences({ setToggleExperience, setSelectedExperience }) {
     const t = useTranslation();
@@ -43,12 +46,12 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
 
     const experiences = [
         exp('tasukeru', tasukeruLogo, labels.openApp, { galleryImages: [tasukeruThumb] }),
-        exp('movieseeker', movieseekerLogo, labels.viewCode, { galleryImages: [msThumb1, msThumb2, msThumb3] }),
+        exp('movieseeker', movieseekerLogo, labels.openApp, { galleryImages: [msThumb1, msThumb2, msThumb3] }),
         exp('portfolio', portfolio, labels.viewCode),
         exp('datalog', datalog, labels.viewDemo, { showSite: false }),
-        exp('merieux', merieuxLogo, labels.visitSite),
-        exp('abas', abasLogo, labels.visitSite),
-        exp('abbidigital', abbiStudioLogo, labels.visitSite),
+        exp('merieux', merieuxLogo, labels.visitSite, { galleryImages: [merieuxThumb] }),
+        exp('abas', abasLogo, labels.visitSite, { galleryImages: [abasThumb] }),
+        exp('abbidigital', abbiStudioLogo, labels.visitSite, { galleryImages: [abbiThumb] }),
     ];
 
     return (

@@ -41,7 +41,7 @@ export const translations = {
           "J'ai créé Tasukeru pour faciliter l'organisation au quotidien et parce que j'apprécie la philosophie Kanban japonaise. Sur près de trois mois, j'ai conçu une application full-stack : Angular pour le front, Spring Boot + PostgreSQL pour le back, avec une API REST. L'application est collaborative : on peut partager l'ID d'un board pour travailler à plusieurs, et les mises à jour arrivent en temps réel grâce aux Server-Sent Events. J'ai surmonté des points techniques comme le drag-and-drop côté front (listes/colonnes/cartes) et la diffusion temps réel, le tout sécurisé par des tests unitaires, d'intégration et E2E. Le déploiement est dockerisé sur AWS (EC2/RDS derrière Nginx) avec des environnements dev/prod et une CI/CD GitHub Actions ; l'architecture a été pensée pour minimiser les coûts sans sacrifier les performances. Le projet est open source, et le code ainsi que les mises à jour sont disponibles sur mon GitHub.",
       },
       movieseeker: {
-        link: "https://github.com/Inerio/cine-search",
+        link: "https://movieseeker.primary-key.ovh/",
         title: "Projet full stack MovieSeeker",
         description: "Recherche de films par IA",
         role: "Développeur Full Stack",
@@ -216,7 +216,7 @@ export const translations = {
           "I built Tasukeru to make day-to-day organization simpler and because I'm a fan of the Japanese Kanban system. Over almost three months I designed a full-stack app: Angular on the front end, Spring Boot + PostgreSQL on the back end, exposed through a REST API. It's collaborative: you can share a board ID to work with others, and updates stream in real time via Server-Sent Events. I worked through tricky parts such as front-end drag-and-drop (lists/columns/cards) and the real-time pipeline, backed by unit, integration, and end-to-end tests. The app is Dockerized and deployed on AWS (EC2/RDS behind Nginx) with separate dev/prod environments and GitHub Actions CI/CD; the architecture is tuned to keep costs low while remaining performant. The project is open source, and the code and ongoing updates are available on my GitHub.",
       },
       movieseeker: {
-        link: "https://github.com/Inerio/cine-search",
+        link: "https://movieseeker.primary-key.ovh/",
         title: "Full stack project MovieSeeker",
         description: "AI-powered movie search",
         role: "Full Stack Developer",
