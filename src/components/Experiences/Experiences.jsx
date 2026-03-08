@@ -8,6 +8,7 @@ import abbiStudioLogo from '../../assets/pictures/logos/abbi-studio-logo.png';
 import tasukeruLogo from '../../assets/pictures/logos/tasukeru.svg';
 import datalog from '../../assets/pictures/logos/datalog.svg';
 import movieseekerLogo from '../../assets/pictures/logos/movieseeker.svg';
+import gustaveLogo from '../../assets/pictures/logos/gustavecode.svg';
 
 // -- Gallery images (import your screenshots here) --
 import tasukeruThumb from '../../assets/pictures/thumbnail/tasukeru_thumbnail.png';
@@ -47,6 +48,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
     const experiences = [
         exp('tasukeru', tasukeruLogo, labels.openApp, { galleryImages: [tasukeruThumb] }),
         exp('movieseeker', movieseekerLogo, labels.openApp, { galleryImages: [msThumb1, msThumb2, msThumb3] }),
+        exp('gustavecode', gustaveLogo, labels.viewCode),
         exp('portfolio', portfolio, labels.viewCode),
         exp('datalog', datalog, labels.viewDemo, { showSite: false }),
         exp('merieux', merieuxLogo, labels.visitSite, { galleryImages: [merieuxThumb] }),

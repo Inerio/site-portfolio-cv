@@ -65,6 +65,31 @@ export const translations = {
         details:
           "MovieSeeker est une application de recherche de films et séries que j'ai développée en full stack. L'idée est née d'une envie d'aller au-delà de la simple recherche par mots-clés : grâce à l'intégration de l'IA Groq, on peut décrire un film en langage naturel (« un film avec des robots qui voyagent dans le temps ») et obtenir des résultats pertinents. Le front-end est développé en Angular 19, le back-end en Spring Boot 3.5 avec Java 21, et les données proviennent de l'API TMDB. L'application propose des pages de détail riches (casting, bandes-annonces, recommandations), un système de tendances, et une interface bilingue français/anglais. Le tout est conteneurisé avec Docker Compose pour un déploiement simple. Le projet est open source et disponible sur mon GitHub.",
       },
+      gustavecode: {
+        link: "https://github.com/Inerio/my-personal-LLM",
+        title: "Projet full stack Gustave Code",
+        description: "Assistant IA local",
+        role: "Développeur Full Stack",
+        duration: "~2 mois",
+        showGallery: false,
+        tags: [
+          "React",
+          "FastAPI",
+          "LangChain",
+          "Ollama",
+          "ChromaDB",
+          "Docker",
+        ],
+        highlights: [
+          "Assistant IA 100% local, aucune dépendance cloud",
+          "Streaming temps réel token-par-token via SSE",
+          "Écosystème d'outils : recherche web, Wikipedia, calculatrice, météo",
+          "Mémoire long-terme avec ChromaDB (embeddings vectoriels)",
+          "3 profils de qualité (Fast 14B, Quality 70B, Expert 8x22B)",
+        ],
+        details:
+          "Gustave Code est un assistant IA personnel que j'ai conçu pour fonctionner entièrement en local, sans aucune donnée envoyée vers le cloud. Le front-end est développé en React avec Tailwind CSS, le back-end en FastAPI avec LangChain et LangGraph pour l'orchestration d'un agent REAct. L'inférence est assurée par Ollama avec accélération GPU, et la mémoire long-terme repose sur ChromaDB pour la recherche sémantique. L'application propose trois profils de qualité (Fast, Quality, Expert) utilisant des modèles ablitérés sans filtres de censure, du streaming temps réel token-par-token, un système de tool calling (recherche web via Tavily/DuckDuckGo, Wikipedia, calculatrice, météo, datetime), et une gestion complète des conversations. Le tout est conteneurisé avec Docker Compose et dispose d'un launcher desktop pour la gestion des services. Le projet est open source et disponible sur mon GitHub.",
+      },
       datalog: {
         showSite: false,
         showGallery: false,
@@ -239,6 +264,31 @@ export const translations = {
         ],
         details:
           "MovieSeeker is a movie and TV show search app that I developed full stack. The idea came from wanting to go beyond simple keyword search: thanks to Groq AI integration, you can describe a movie in natural language ('a film with robots that travel through time') and get relevant results. The front end is built with Angular 19, the back end with Spring Boot 3.5 and Java 21, and data comes from the TMDB API. The app features rich detail pages (cast, trailers, recommendations), a trending section, and a bilingual French/English interface. Everything is containerized with Docker Compose for easy deployment. The project is open source and available on my GitHub.",
+      },
+      gustavecode: {
+        link: "https://github.com/Inerio/my-personal-LLM",
+        title: "Full stack project Gustave Code",
+        description: "Local AI assistant",
+        role: "Full Stack Developer",
+        duration: "~2 months",
+        showGallery: false,
+        tags: [
+          "React",
+          "FastAPI",
+          "LangChain",
+          "Ollama",
+          "ChromaDB",
+          "Docker",
+        ],
+        highlights: [
+          "100% local AI assistant with zero cloud dependency",
+          "Real-time token-by-token streaming via SSE",
+          "Tool ecosystem: web search, Wikipedia, calculator, weather",
+          "Long-term memory with ChromaDB (vector embeddings)",
+          "3 quality profiles (Fast 14B, Quality 70B, Expert 8x22B)",
+        ],
+        details:
+          "Gustave Code is a personal AI assistant that I designed to run entirely locally, with no data sent to the cloud. The front end is built with React and Tailwind CSS, the back end with FastAPI using LangChain and LangGraph for REAct agent orchestration. Inference is handled by Ollama with GPU acceleration, and long-term memory relies on ChromaDB for semantic search. The app offers three quality profiles (Fast, Quality, Expert) using abliterated uncensored models, real-time token-by-token streaming, a tool-calling system (web search via Tavily/DuckDuckGo, Wikipedia, calculator, weather, datetime), and full conversation management. Everything is containerized with Docker Compose and includes a desktop launcher for service management. The project is open source and available on my GitHub.",
       },
       datalog: {
         showSite: false,
