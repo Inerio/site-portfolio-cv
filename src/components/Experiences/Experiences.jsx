@@ -9,6 +9,7 @@ import tasukeruLogo from '../../assets/pictures/logos/tasukeru.svg';
 import datalog from '../../assets/pictures/logos/datalog.svg';
 import movieseekerLogo from '../../assets/pictures/logos/movieseeker.svg';
 import gustaveLogo from '../../assets/pictures/logos/gustavecode.svg';
+import downloaditLogo from '../../assets/pictures/logos/downloadit.svg';
 
 // -- Gallery images --
 import tasukeruThumb from '../../assets/pictures/thumbnail/tasukeru_thumbnail.png';
@@ -19,6 +20,7 @@ import merieuxThumb from '../../assets/pictures/thumbnail/mérieuxnutrisciences_
 import abasThumb from '../../assets/pictures/thumbnail/abas_thumbnail.png';
 import abbiThumb from '../../assets/pictures/thumbnail/abbidigital_thumbnail.png';
 import gustaveCode1 from '../../assets/pictures/thumbnail/gustavecode_thumbnail.png';
+import downloaditThumb from '../../assets/pictures/thumbnail/downloadit_thumbnail.png';
 
 function Experiences({ setToggleExperience, setSelectedExperience }) {
     const t = useTranslation();
@@ -50,6 +52,7 @@ function Experiences({ setToggleExperience, setSelectedExperience }) {
         exp('tasukeru', tasukeruLogo, labels.openApp, { galleryImages: [tasukeruThumb] }),
         exp('movieseeker', movieseekerLogo, labels.openApp, { galleryImages: [msThumb1, msThumb2, msThumb3] }),
         exp('gustavecode', gustaveLogo, labels.viewCode, { galleryImages: [gustaveCode1] }),
+        exp('downloadit', downloaditLogo, labels.openApp, { galleryImages: [downloaditThumb] }),
         exp('portfolio', portfolio, labels.viewCode),
         exp('datalog', datalog, labels.viewDemo, { showSite: false }),
         exp('merieux', merieuxLogo, labels.visitSite, { galleryImages: [merieuxThumb] }),

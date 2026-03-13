@@ -83,6 +83,31 @@ export const translations = {
         details:
           "Gustave Code est un assistant IA personnel que j'ai conçu pour fonctionner entièrement en local, sans aucune donnée envoyée vers le cloud. Le front-end est développé en React avec Tailwind CSS, le back-end en FastAPI avec LangChain et LangGraph pour l'orchestration d'un agent REAct. L'inférence est assurée par Ollama avec accélération GPU, et la mémoire long-terme repose sur ChromaDB pour la recherche sémantique. L'application propose trois profils de qualité (Fast, Quality, Expert) utilisant des modèles ablitérés sans filtres de censure, du streaming temps réel token-par-token, un système de tool calling (recherche web via Tavily/DuckDuckGo, Wikipedia, calculatrice, météo, datetime), et une gestion complète des conversations. Le tout est conteneurisé avec Docker Compose et dispose d'un launcher desktop pour la gestion des services. Le projet est open source et disponible sur mon GitHub.",
       },
+      downloadit: {
+        link: "https://download-it.primary-key.ovh/",
+        title: "Projet full stack Download It",
+        description: "Téléchargeur de vidéos",
+        role: "Développeur Full Stack",
+        duration: "~3 jours",
+        showGallery: true,
+        tags: [
+          "Angular",
+          "Spring Boot",
+          "Java 21",
+          "yt-dlp",
+          "Docker",
+          "CI/CD",
+        ],
+        highlights: [
+          "Support de 100+ plateformes vidéo (YouTube, TikTok, X, Instagram…)",
+          "Détection automatique de plateforme et sélection intelligente de format",
+          "Fallback Twitter/X via l'API FixTweet",
+          "Application bilingue français / anglais avec thème clair/sombre",
+          "Déploiement conteneurisé avec CI/CD GitHub Actions",
+        ],
+        details:
+          "Download It est une application web permettant de télécharger des vidéos depuis plus de 100 plateformes en collant simplement une URL. Le front-end est développé en Angular 19 avec des composants standalone, le back-end en Spring Boot 3.5 avec Java 21 et yt-dlp comme moteur d'extraction. L'application détecte automatiquement la plateforme, propose plusieurs formats avec métadonnées (résolution, taille, codec), et permet de personnaliser le nom du fichier avant téléchargement. Un système de fallback via l'API FixTweet gère les cas où yt-dlp échoue sur Twitter/X. L'interface est bilingue (FR/EN) avec un thème clair/sombre, et un formulaire de feedback intégré envoie les retours par email. Côté sécurité : protection SSRF, validation des URLs, rate limiting et nettoyage des noms de fichiers. Le tout est conteneurisé avec Docker Compose et déployé automatiquement via GitHub Actions derrière Cloudflare.",
+      },
       datalog: {
         showSite: false,
         showGallery: false,
@@ -275,6 +300,31 @@ export const translations = {
         ],
         details:
           "Gustave Code is a personal AI assistant that I designed to run entirely locally, with no data sent to the cloud. The front end is built with React and Tailwind CSS, the back end with FastAPI using LangChain and LangGraph for REAct agent orchestration. Inference is handled by Ollama with GPU acceleration, and long-term memory relies on ChromaDB for semantic search. The app offers three quality profiles (Fast, Quality, Expert) using abliterated uncensored models, real-time token-by-token streaming, a tool-calling system (web search via Tavily/DuckDuckGo, Wikipedia, calculator, weather, datetime), and full conversation management. Everything is containerized with Docker Compose and includes a desktop launcher for service management. The project is open source and available on my GitHub.",
+      },
+      downloadit: {
+        link: "https://download-it.primary-key.ovh/",
+        title: "Full stack project Download It",
+        description: "Video downloader",
+        role: "Full Stack Developer",
+        duration: "~3 days",
+        showGallery: true,
+        tags: [
+          "Angular",
+          "Spring Boot",
+          "Java 21",
+          "yt-dlp",
+          "Docker",
+          "CI/CD",
+        ],
+        highlights: [
+          "Support for 100+ video platforms (YouTube, TikTok, X, Instagram…)",
+          "Automatic platform detection and smart format selection",
+          "Twitter/X fallback via FixTweet API",
+          "Bilingual app (French / English) with light/dark theme",
+          "Containerized deployment with GitHub Actions CI/CD",
+        ],
+        details:
+          "Download It is a web application that lets users download videos from over 100 platforms by simply pasting a URL. The front end is built with Angular 19 using standalone components, and the back end with Spring Boot 3.5, Java 21, and yt-dlp as the extraction engine. The app automatically detects the platform, offers multiple formats with metadata (resolution, file size, codec), and lets users customize the filename before downloading. A fallback system via the FixTweet API handles cases where yt-dlp fails on Twitter/X. The interface is bilingual (FR/EN) with light/dark theme support, and a built-in feedback form sends user reports via email. On the security side: SSRF protection, URL validation, rate limiting, and filename sanitization. Everything is containerized with Docker Compose and auto-deployed via GitHub Actions behind Cloudflare.",
       },
       datalog: {
         showSite: false,
