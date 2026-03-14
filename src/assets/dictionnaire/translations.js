@@ -72,7 +72,7 @@ export const translations = {
         role: "Développeur Full Stack",
         duration: "~2 mois",
         showGallery: true,
-        tags: ["React", "FastAPI", "LangChain", "Ollama", "ChromaDB", "Docker"],
+        tags: ["Python", "React", "FastAPI", "LangChain", "Ollama", "ChromaDB", "Docker"],
         highlights: [
           "Assistant IA 100% local, aucune dépendance cloud",
           "Streaming temps réel token-par-token via SSE",
@@ -290,7 +290,7 @@ export const translations = {
         role: "Full Stack Developer",
         duration: "~2 months",
         showGallery: true,
-        tags: ["React", "FastAPI", "LangChain", "Ollama", "ChromaDB", "Docker"],
+        tags: ["Python", "React", "FastAPI", "LangChain", "Ollama", "ChromaDB", "Docker"],
         highlights: [
           "100% local AI assistant with zero cloud dependency",
           "Real-time token-by-token streaming via SSE",
